@@ -26,7 +26,7 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 ## Editing
 
 - **Text, prices, resources:** open the page's `.html` file, find the text, change it, save. Comments like `<!-- To change a price… -->` mark the common spots.
-- **After changing `css/style.css` or `js/site.js`:** raise the `?v=6` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
+- **After changing `css/style.css` or `js/site.js`:** raise the `?v=9` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
 - **Menu and footer** are repeated in every page, so a menu change has to be made in each file.
 - **Search result text:** each page's `<title>` and `<meta name="description">` near the top are what Google shows.
 - **Prices and FAQ on the Services page** also appear in the "Structured data" block near the top of `services.html`. Change both places.

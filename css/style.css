@@ -340,3 +340,48 @@ h1.kicker, .home-hero h1.kicker { font-family: var(--sans); font-size: 0.85rem; 
 .snapshots { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: start; }
 .snapshots img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
 .snapshots img:nth-child(2) { margin-top: 2.5rem; }
+
+/* ---- One reading size everywhere ----
+   Paragraphs, lists, cards, FAQ answers and articles all use the same size.
+   Only two things are larger: the single intro line under a page title, and
+   short stand-alone statements centred under the birds. */
+.lead, .card, .card ul, .package li, .faq details p, .fee-note, .article p, .pull + p { font-size: 1.3rem; line-height: 1.55; }
+.page-hero .lead, .closing .lead { font-size: 1.5rem; line-height: 1.45; }
+.byline { font-size: 0.95rem; }
+.article .eyebrow, .author-box .eyebrow { font-size: 0.85rem; line-height: 1.4; }
+
+/* ---- One typeface rule ----
+   Garamond for everything people read. The sans-serif is used only for
+   the menu, buttons (and button-like tags), and small ALL-CAPS labels. */
+.note, .price, .price-list, .inquiry-form, .site-footer, .creds li, .fine-print, .resource .meta,
+.byline, .aside-card .phone, .field-error, .faq summary::after, .link-list a::after { font-family: var(--serif); }
+.button, .inquiry-form .button, .chips, .chips a, .eyebrow, .kicker, h1.kicker, .contact-list span, .site-footer h2 { font-family: var(--sans); }
+
+/* Garamond needs a little more size than the sans-serif did */
+.note, .fine-print, .resource .meta, .aside-card .phone, .creds li { font-size: 1.1rem; line-height: 1.45; }
+.creds strong { font-size: 1.35rem; }
+.byline { font-size: 1.15rem; font-style: italic; }
+.price { font-size: 1.3rem; font-weight: 500; }
+.price-list li { font-size: 1.15rem; }
+.site-footer { font-size: 1.15rem; }
+.copyright { font-size: 1.05rem; }
+.inquiry-form label, .inquiry-form legend { font-weight: 500; font-size: 1.3rem; }
+.inquiry-form .choice { font-size: 1.25rem; }
+.inquiry-form .note { font-size: 1.1rem; }
+.inquiry-form input, .inquiry-form textarea { font-family: var(--serif); font-size: 1.25rem; }
+.package .price { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; }
+
+/* ---- Header: menu in Garamond, larger, with a larger logo ---- */
+.nav-bar { font-family: var(--serif); padding: 0.75rem 0; }
+.nav-bar ul { gap: 0.25rem 2rem; }
+.nav-bar ul a { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; }
+.brand img { height: 4.5rem; }
+.site-footer { font-size: 1.2rem; }
+html { scroll-padding-top: 7.5rem; }
+@media (min-width: 50rem) { .sticky { top: 8rem; } }
+@media (min-width: 60rem) { .aside-card { top: 8rem; } }
+@media (max-width: 52rem) {
+  .brand img { height: 3.1rem; }
+  .nav-bar ul { gap: 0.1rem 1.4rem; }
+  .nav-bar ul a { font-size: 1.3rem; }
+}
