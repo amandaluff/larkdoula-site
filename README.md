@@ -15,6 +15,8 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 | `contact.html` | Contact (`/contact`) |
 | `research/index.html` | Doula, PhD research library (`/research`) |
 | `research/waterbirth.html`, `research/doula-evidence.html` | Articles |
+| `privacy.html` | Privacy notice (`/privacy`), linked from the footer |
+| `js/site.js` | Sends phone, email, call-button and form events to Google Analytics |
 | `css/style.css` | All colors, fonts and layout. The palette is the list of variables at the top. |
 | `images/` | Photos and logo (see `images/README.md`) |
 | `home.html` | Sends the old Google Sites address `/home` to the home page |

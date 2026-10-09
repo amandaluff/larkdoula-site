@@ -47,6 +47,8 @@
     gtag('js', new Date());
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
+  <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
+  <script defer src="js/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -90,12 +92,67 @@
           <p class="note">Your privacy and trust mean everything to me. Any information you share is kept confidential and will only be used to help me provide the best support for your family.</p>
         </div>
         <div>
-          <div class="card form-card">
-            <!-- Your existing Google Form. If the form gets longer or shorter, adjust "height" in css/style.css (.form-frame). -->
-            <iframe class="form-frame" title="Lark Doula inquiry form" loading="lazy"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdueKYZ0EFx88UsgZavv1OnWaurR7tycCQxdsQx9zauyZ6Asg/viewform?embedded=true">Loading…</iframe>
+          <!-- Inquiry form. Each submission is emailed to you by the form service (formspree.io).
+               To change a question, edit its label below. Keep each field's name="..." unique. -->
+          <form class="card inquiry-form" id="inquiry-form" action="https://formspree.io/f/mnpjdeld" method="POST" aria-label="Inquiry form">
+            <p class="note"><span class="req">*</span> Required</p>
+
+            <label for="f-name">First and last name <span class="req">*</span></label>
+            <input id="f-name" type="text" name="Name" autocomplete="name" required>
+
+            <label for="f-email">Email address <span class="req">*</span></label>
+            <input id="f-email" type="email" name="email" autocomplete="email" required>
+
+            <label for="f-phone">Phone number <span class="hint">(needed if you'd like a call or text)</span></label>
+            <input id="f-phone" type="tel" name="Phone" autocomplete="tel">
+
+            <fieldset>
+              <legend>How would you prefer to be contacted?</legend>
+              <label class="choice"><input type="checkbox" name="Preferred contact" value="Phone Call"> Phone Call</label>
+              <label class="choice"><input type="checkbox" name="Preferred contact" value="Text Message"> Text Message</label>
+              <label class="choice"><input type="checkbox" name="Preferred contact" value="Email"> Email</label>
+            </fieldset>
+
+            <fieldset id="f-services">
+              <legend>Which services are you interested in? <span class="req">*</span></legend>
+              <label class="choice"><input type="checkbox" name="Services" value="Prenatal &amp; Postpartum Support"> Prenatal &amp; Postpartum Support</label>
+              <label class="choice"><input type="checkbox" name="Services" value="Birth Doula Support"> Birth Doula Support</label>
+              <label class="choice"><input type="checkbox" name="Services" value="NICU Support"> NICU Support</label>
+              <label class="choice"><input type="checkbox" name="Services" value="Not sure yet"> Not sure yet</label>
+              <label class="choice"><input type="checkbox" name="Services" value="Other"> Other: <input type="text" name="Services (other)" aria-label="Other service"></label>
+              <p class="field-error" id="f-services-error" hidden>Please choose at least one option.</p>
+            </fieldset>
+
+            <label for="f-date">Due date or baby's birth date <span class="hint">(if applicable)</span></label>
+            <input id="f-date" type="text" name="Due date or birth date">
+
+            <label for="f-details">Anything you'd like me to know? <span class="hint">(optional)</span></label>
+            <textarea id="f-details" name="Details" rows="4"></textarea>
+
+            <fieldset>
+              <legend>How did you hear about Lark Doula?</legend>
+              <label class="choice"><input type="radio" name="How did you hear about us" value="Instagram or Facebook"> Instagram or Facebook</label>
+              <label class="choice"><input type="radio" name="How did you hear about us" value="Google Search"> Google Search</label>
+              <label class="choice"><input type="radio" name="How did you hear about us" value="Word of Mouth / Friend"> Word of Mouth / Friend</label>
+              <label class="choice"><input type="radio" name="How did you hear about us" value="Healthcare Provider Referral"> Healthcare Provider Referral</label>
+              <label class="choice"><input type="radio" name="How did you hear about us" value="Other"> Other: <input type="text" name="How did you hear (other)" aria-label="Other way you heard about Lark Doula"></label>
+            </fieldset>
+
+            <!-- Hidden fields: the email subject line (the sender's name is added automatically),
+                 and a trap that catches spam robots -->
+            <input type="hidden" name="_subject" value="Doula Inquiry Form Submission">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="trap" aria-hidden="true">
+
+            <button class="button" type="submit">Send Inquiry</button>
+            <p class="note" style="margin: 1rem 0 0">Your information is kept confidential. See the <a href="privacy">privacy notice</a>.</p>
+            <p class="field-error" id="f-form-error" role="alert" hidden>Sorry, something went wrong and your inquiry was not sent. Please email <a href="mailto:amanda@larkdoula.com">amanda@larkdoula.com</a> or call/text <a href="tel:+14142853445">(414) 285-3445</a>.</p>
+          </form>
+
+          <!-- Shown in place of the form once an inquiry has been sent -->
+          <div class="card accent form-thanks" id="inquiry-thanks" tabindex="-1" hidden>
+            <h2>Thank you for reaching out.</h2>
+            <p class="lead">I typically respond within one business day.</p>
           </div>
-          <p class="note" style="margin-top: 1rem"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdueKYZ0EFx88UsgZavv1OnWaurR7tycCQxdsQx9zauyZ6Asg/viewform">Open the form in a new page</a></p>
         </div>
       </div>
     </section>
@@ -127,7 +184,7 @@
           </ul>
         </nav>
       </div>
-      <p class="copyright">Lark Doula is based in Bay View and serves families across Milwaukee County, including Wauwatosa, Whitefish Bay, Glendale, Greenfield, West Allis, Franklin, Oak Creek, South Milwaukee, and Cudahy. Virtual support available everywhere.<br>&copy; 2026 Lark Services LLC</p>
+      <p class="copyright">Lark Doula is based in Bay View and serves families across Milwaukee County, including Wauwatosa, Whitefish Bay, Glendale, Greenfield, West Allis, Franklin, Oak Creek, South Milwaukee, and Cudahy. Virtual support available everywhere.<br>&copy; 2026 Lark Services LLC &middot; <a href="privacy">Privacy</a></p>
     </div>
   </footer>
 </body>

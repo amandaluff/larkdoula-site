@@ -188,8 +188,29 @@ li::marker { color: var(--terracotta); }
 .contact-list li { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
 .contact-list span { display: block; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .contact-list a { font-family: var(--serif); font-size: 1.4rem; text-decoration: none; }
-.form-card { padding: 0.5rem; }
-.form-frame { width: 100%; height: 1500px; border: 0; border-radius: 12px; }
+.inquiry-form { display: block; padding: clamp(1.5rem, 4vw, 2.5rem); }
+.inquiry-form[hidden], .form-thanks[hidden] { display: none; }
+.inquiry-form label, .inquiry-form legend { display: block; font-weight: 600; margin: 1.5rem 0 0.4rem; padding: 0; }
+.inquiry-form .hint { font-weight: 400; color: var(--muted); }
+.inquiry-form input[type="text"], .inquiry-form input[type="email"], .inquiry-form input[type="tel"], .inquiry-form textarea {
+  width: 100%; padding: 0.7rem 0.85rem; font: inherit; color: var(--ink); background: var(--paper);
+  border: 1px solid #b9ae9f; border-radius: 8px;
+}
+.inquiry-form input:focus-visible, .inquiry-form textarea:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 1px; border-color: var(--turquoise); }
+.inquiry-form fieldset { border: 0; padding: 0; margin: 1.5rem 0 0; min-width: 0; }
+.inquiry-form legend { margin-top: 0; }
+.inquiry-form .choice { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-weight: 400; margin: 0.5rem 0; }
+.inquiry-form .choice input[type="checkbox"], .inquiry-form .choice input[type="radio"] { width: 1.15rem; height: 1.15rem; accent-color: var(--turquoise); flex: none; margin: 0; }
+.inquiry-form .choice input[type="text"] { flex: 1 1 10rem; width: auto; padding: 0.4rem 0.6rem; }
+.inquiry-form textarea { resize: vertical; display: block; }
+.inquiry-form > .note:first-child { margin: 0; }
+.inquiry-form button { margin-top: 1.75rem; cursor: pointer; }
+.inquiry-form button:disabled { opacity: 0.6; cursor: default; }
+.req { color: var(--terracotta); }
+.field-error { color: #a33a22; font-weight: 600; margin: 0.75rem 0 0; }
+.trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-thanks { padding: clamp(1.75rem, 4vw, 2.75rem); }
+.form-thanks:focus { outline: none; }
 
 /* Footer */
 .site-footer { background: var(--turquoise-dark); color: #d9e4e2; padding: 3.5rem 0 2rem; font-size: 0.98rem; }
