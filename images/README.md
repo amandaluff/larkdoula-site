@@ -10,6 +10,8 @@ Put these files in this folder, with exactly these names:
 | `amanda-portrait.jpg` | Home | Close-up outdoor portrait |
 | `amanda-seated.jpg` | Meet Amanda | Seated outdoor portrait |
 | `amanda-conference.jpg` | Meet Amanda | Presenting at a conference |
+| `amanda-cake.jpg`, `amanda-domes.jpg` | Meet Amanda ("Outside of work") | Two personal photos |
+| `birds.png` | Home, Services, closing bands | The two birds from the logo, transparent background |
 | `flower-buds.jpg` | Services (Pregnancy & Birth) | Pink flower buds |
 | `lake-sunrise.jpg` | Services (NICU Support) | Sunrise over Lake Michigan |
 | `research-waterbirth.jpg` | Research index + waterbirth article | Article photo |

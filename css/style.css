@@ -302,3 +302,41 @@ li::marker { color: var(--terracotta); }
 .band .steps li { border-top-color: rgba(255, 255, 255, 0.2); }
 .band .steps li::before { color: #eab195; }
 .band .steps h3 { color: #fff; }
+
+/* Small heading above the direct contact details */
+.side-heading { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.aside-more { margin: 1.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); text-align: center; }
+
+/* The two birds from the logo, used as a quiet divider */
+.birds { width: 5rem; height: auto; margin: 0 auto 1.5rem; opacity: 0.85; }
+.birds.light { filter: brightness(0) invert(1); opacity: 0.7; }
+.birds.left { margin-left: 0; }
+.closing { text-align: center; }
+.closing .lead { color: inherit; }
+
+/* Reduced-fee statement under the packages */
+.fee-note { max-width: 44rem; margin: 3.5rem 0 0; padding-left: 1.25rem; border-left: 2px solid var(--terracotta); font-size: 1.15rem; }
+
+/* ---- Personal-practice pass: Garamond for reading, sans-serif only for small interface text ---- */
+body { font-family: var(--serif); font-size: 1.3rem; line-height: 1.55; }
+.lead { font-size: 1.5rem; line-height: 1.45; }
+.nav-bar, .button, .note, .eyebrow, .price, .price-list, .chips, .inquiry-form, .contact-list span,
+.site-footer, .creds li, .fine-print, .resource .meta, .byline, .aside-card .phone, .field-error { font-family: var(--sans); }
+.creds strong { font-family: var(--serif); }
+.site-footer .name { font-family: var(--serif); }
+.card { font-size: 1.2rem; }
+.package li, .card ul { font-size: 1.15rem; }
+.faq details p { font-size: 1.2rem; }
+.article p { font-size: 1.35rem; line-height: 1.65; }
+.fee-note { font-size: 1.3rem; }
+
+/* Small search heading above a large, human first line */
+h1.kicker, .home-hero h1.kicker { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.4; color: var(--terracotta); margin: 0 0 1rem; text-wrap: balance; }
+.display { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, 5.2vw, 3.9rem); line-height: 1.08; letter-spacing: -0.01em; color: var(--turquoise-dark); margin: 0 0 0.5em; text-wrap: balance; }
+.subtitle { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--terracotta); margin: -0.25rem 0 1rem; }
+.home-hero .actions { margin-bottom: 1.25rem; }
+
+/* Two personal photos at the end of Meet Amanda */
+.snapshots { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: start; }
+.snapshots img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
+.snapshots img:nth-child(2) { margin-top: 2.5rem; }

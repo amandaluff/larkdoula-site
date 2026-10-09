@@ -22,10 +22,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fonts load in the background so they never delay the page appearing -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap"></noscript>
   <!-- The ?v= number makes browsers fetch the newest stylesheet. Raise it whenever css/style.css changes. -->
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=6">
 
   <!-- Structured data: tells search engines what this page is about -->
   <script type="application/ld+json">
@@ -74,7 +74,7 @@
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
   <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
-  <script defer src="js/site.js?v=3"></script>
+  <script defer src="js/site.js?v=6"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -101,12 +101,11 @@
     <section class="home-hero">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">For NICU families</p>
-          <h1>NICU Doula Support in Milwaukee</h1>
-          <p class="lead">You don't have to figure this out alone, and you don't need to have planned for a doula. I support families at any point in a NICU stay, from the first days through the transition home.</p>
+          <h1 class="kicker">NICU doula support in Milwaukee</h1>
+          <p class="display">You don't have to figure this out alone.</p>
+          <p class="lead">You don't need to have planned for a doula. I support families at any point in a NICU stay, from the first days through the transition home.</p>
           <p class="actions">
             <a class="button" href="tel:+14142853445">Call or Text (414) 285-3445</a>
-            <a class="button outline" href="contact">Schedule a Free 30-Minute Call</a>
           </p>
         </div>
         <figure class="hero-image">
@@ -143,18 +142,11 @@
           <p>I support families with babies in any Milwaukee-area NICU, including Children's Wisconsin, Aurora Sinai, Aurora West Allis, Ascension Columbia St. Mary's, and Ascension St. Joseph. Visits can happen at the hospital (as policy allows), at home, or virtually.</p>
         </div>
         <aside class="card accent aside-card">
-          <p class="eyebrow">Start here</p>
           <h2>Free 30-minute call</h2>
           <p>No pressure, and you don't need to know what kind of support you want yet.</p>
           <a class="button" href="contact">Schedule a Call</a>
-            <p class="phone">or call/text <a href="tel:+14142853445">(414) 285-3445</a></p>
-          <!-- Prices also appear further down this page and on services.html -->
-          <ul class="price-list">
-              <li><span>NICU Essentials</span><span class="price">$450</span></li>
-              <li><span>Extended NICU Support</span><span class="price">$250 / 4 weeks</span></li>
-              <li><span>NICU to Home</span><span class="price">$350</span></li>
-          </ul>
-          <a class="arrow-link" href="#packages">See what's included</a>
+          <p class="phone">or call/text <a href="tel:+14142853445">(414) 285-3445</a></p>
+          <p class="aside-more"><a class="arrow-link" href="#packages">See packages</a></p>
         </aside>
       </div>
     </section>
@@ -194,6 +186,7 @@
 
     <section class="band">
       <div class="wrap">
+        <img class="birds light left" src="images/birds.png" alt="" width="480" height="242">
         <h2>How it works</h2>
         <ol class="steps">
           <li><h3>Reach out</h3><p>Call, text, or fill out the inquiry form. I typically respond within one business day.</p></li>

@@ -22,10 +22,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fonts load in the background so they never delay the page appearing -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap"></noscript>
   <!-- The ?v= number makes browsers fetch the newest stylesheet. Raise it whenever css/style.css changes. -->
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=6">
 
   <!-- Structured data: tells search engines what this page is about -->
   <script type="application/ld+json">
@@ -112,7 +112,7 @@
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
   <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
-  <script defer src="js/site.js?v=3"></script>
+  <script defer src="js/site.js?v=6"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -139,14 +139,15 @@
     <section class="home-hero">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Evidence-Based Support for Pregnancy &amp; Beyond</p>
-          <h1>Milwaukee Doula for Birth, High&#8209;Risk Pregnancy &amp; NICU Families</h1>
-          <p class="lead">Lark Doula offers birth doula support, high-risk and complicated pregnancy support, and NICU support to families in Milwaukee and virtually. I'm Amanda Luff, PhD, a certified doula with a doctorate in public health and over a decade of experience in maternal and child health.</p>
+          <!-- This small line is the page's main heading for search engines -->
+          <h1 class="kicker">Milwaukee doula for birth, high&#8209;risk pregnancy &amp; NICU families</h1>
+          <p class="display">I'm Amanda, and I'm glad you're here!</p>
+          <p class="lead">I'm a doula with a doctorate in public health and over a decade of experience in maternal and child health. I believe birth looks different for everyone, and there's no single "right" way to do it.</p>
+          <p>Whether you're hoping for an unmedicated birth, planning an epidural, preparing for an induction or a scheduled cesarean, or aren't sure yet what you want, I offer the same respectful, judgment-free support. I have particular expertise in high-risk pregnancies and NICU stays, where that kind of support is often hardest to find.</p>
           <p class="actions">
             <a class="button" href="contact">Schedule a Free 30-Minute Call</a>
-            <a class="button outline" href="services">See Services &amp; Pricing</a>
           </p>
-          <p class="note">Every support plan starts with a free, no-pressure call to see if we're a good fit.</p>
+          <p><a href="about">More about me</a> &nbsp;&middot;&nbsp; <a href="services">Services &amp; pricing</a></p>
         </div>
         <figure class="hero-photo">
           <img src="images/amanda-portrait.jpg" alt="Amanda Luff, PhD, doula and founder of Lark Doula in Milwaukee, smiling outdoors." width="900" height="860" fetchpriority="high">
@@ -166,20 +167,10 @@
       </div>
     </section>
 
-    <section>
-      <div class="wrap two-col">
-        <h2>I'm Amanda, and I'm glad you're here!</h2>
-        <div>
-          <p class="lead">I'm a doula, and I've spent over a decade working in maternal and child health. I believe birth looks different for everyone, and there's no single "right" way to do it.</p>
-          <p>Whether you're hoping for an unmedicated birth, planning an epidural, preparing for an induction or a scheduled cesarean, or aren't sure yet what you want, I offer the same respectful, judgment-free support. I have particular expertise in high-risk pregnancies and NICU stays, where that kind of support is often hardest to find.</p>
-          <p><a class="arrow-link" href="about">Meet Amanda</a></p>
-        </div>
-      </div>
-    </section>
-
     <section class="sand">
       <div class="wrap">
         <h2>What I Offer</h2>
+        <p class="lead" style="max-width: 44rem">Lark Doula offers birth doula support, high-risk and complicated pregnancy support, and NICU support to families in Milwaukee and virtually.</p>
         <div class="cards">
           <div class="card accent">
             <h3>Birth &amp; Pregnancy Support</h3>
@@ -201,12 +192,18 @@
       </div>
     </section>
 
+    <section>
+      <div class="wrap narrow closing">
+        <img class="birds" src="images/birds.png" alt="" width="480" height="242">
+        <p class="lead">I am happy to work with families experiencing financial need, as well as Black, Indigenous, and LGBTQ+ families, to discuss a support plan that fits your needs and your budget.</p>
+      </div>
+    </section>
+
     <section class="band">
       <div class="wrap two-col wide-left">
         <div>
           <h2>Visits can be virtual or in person.</h2>
-          <p>In-person services available throughout Milwaukee County, including Wauwatosa, Whitefish Bay, Glendale, Greenfield, West Allis, Franklin, Oak Creek, South Milwaukee, and Cudahy.</p>
-          <p style="margin: 0">Not sure if you're in my area? Just ask. Virtual visits are available anywhere.</p>
+          <p style="margin: 0">In-person visits are available throughout Milwaukee County. Not sure if you're in my area? Just ask. Virtual visits are available anywhere.</p>
         </div>
         <p style="margin: 0"><a class="button light" href="contact">Schedule a Free 30-Minute Call</a></p>
       </div>
