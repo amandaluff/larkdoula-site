@@ -385,3 +385,60 @@ html { scroll-padding-top: 7.5rem; }
   .nav-bar ul { gap: 0.1rem 1.4rem; }
   .nav-bar ul a { font-size: 1.3rem; }
 }
+
+/* =====================================================================
+   ONE TYPE SYSTEM (this block overrides everything above it)
+   Typeface: Garamond everywhere, including buttons and labels.
+   Sizes:    reading text 1.3rem · intro under a page title 1.5rem ·
+             small headings 1.5rem · section headings 1.9rem+ ·
+             capital-letter labels 1rem · footer 1.15rem
+   ===================================================================== */
+:root { --sans: "EB Garamond", Garamond, "Adobe Garamond Pro", Georgia, serif; }
+strong, b { font-weight: 600; }
+
+/* Reading text: one size, one colour */
+.note, .inquiry-form .note, .fine-print, .resource .meta, .aside-card .phone, .creds li, .byline,
+.inquiry-form .choice, .inquiry-form label, .inquiry-form legend, .inquiry-form input, .inquiry-form textarea,
+.field-error, .link-list a, .price-list li, .chips.static li {
+  font-size: 1.3rem; line-height: 1.55;
+}
+.note, .inquiry-form .note, .fine-print, .resource .meta, .aside-card .phone, .byline { color: var(--ink); }
+.inquiry-form label, .inquiry-form legend { font-weight: 600; }
+.inquiry-form .hint { font-weight: 400; color: var(--ink); }
+.byline { font-style: italic; }
+
+/* Small headings: one size */
+h3, .package h3, .resource h3, .article-card h3, .offers h3, .do-dont h3, .faq summary, .contact-list a,
+.site-footer .name, .creds strong, .side-heading, .steps h3 { font-size: 1.5rem; line-height: 1.25; }
+.creds strong { font-weight: 500; }
+.price, .package .price, .price-list .price { font-size: 1.5rem; font-weight: 500; }
+
+/* Section headings inside pages: one size */
+.article h2, .flow h2, .aside-card h2, .inquiry-form h2, .package-group .photo h2, .package-group h2,
+.icon-cards .card h2, .resource-group h2 { font-size: 1.9rem; line-height: 1.15; }
+
+/* Quotes: one style */
+.pull, .story-quote blockquote { font-size: 1.6rem; line-height: 1.35; }
+
+/* Capital-letter labels: one style */
+.eyebrow, .kicker, h1.kicker, .home-hero h1.kicker, .contact-list span, .site-footer h2,
+.article .eyebrow, .author-box .eyebrow {
+  font-size: 1rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.4;
+}
+
+/* Buttons and tags, in Garamond */
+.button, .inquiry-form .button { font-size: 1.25rem; font-weight: 500; padding: 0.65rem 1.5rem 0.75rem; letter-spacing: 0.01em; }
+.button.small, .nav-bar .button.small { font-size: 1.15rem; padding: 0.45rem 1.15rem 0.55rem; }
+.chips a { font-size: 1.15rem; font-weight: 400; }
+.arrow-link { font-weight: 500; }
+
+/* Footer: one size */
+.site-footer, .site-footer p, .site-footer li, .copyright { font-size: 1.15rem; line-height: 1.5; }
+.site-footer h2 { font-size: 1rem; }
+.story-quote figcaption, .hero-photo figcaption { font-size: 1.15rem; }
+
+/* "Contact" in the menu is the button */
+.nav-bar ul { align-items: center; }
+.nav-bar ul a.button, .nav-bar ul a.button.small { font-size: 1.3rem; font-weight: 500; color: #fff; padding: 0.4rem 1.3rem 0.5rem; border: 1.5px solid var(--turquoise); border-radius: 999px; }
+.nav-bar ul a.button:hover { color: #fff; background: var(--turquoise-dark); border-color: var(--turquoise-dark); }
+.nav-bar ul a.button[aria-current="page"] { color: #fff; border-color: var(--turquoise); background: var(--turquoise-dark); }
