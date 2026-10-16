@@ -26,11 +26,11 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 ## Editing
 
 - **Text, prices, resources:** open the page's `.html` file, find the text, change it, save. Comments like `<!-- To change a price… -->` mark the common spots.
-- **After changing `css/style.css` or `js/site.js`:** raise the `?v=13` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
+- **After changing `css/style.css` or `js/site.js`:** raise the `?v=14` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
 - **Menu and footer** are repeated in every page, so a menu change has to be made in each file.
 - **Search result text:** each page's `<title>` and `<meta name="description">` near the top are what Google shows.
 - **Prices and FAQ on the Services page** also appear in the "Structured data" block near the top of `services.html`. Change both places.
-- **Package prices are repeated** on `nicu-doula.html` and `high-risk-pregnancy-doula.html`, and the **hospital list** appears on those two pages and in the Services FAQ. Search all files for the old text when you change either.
+- **Birth and prenatal package prices are repeated** on `high-risk-pregnancy-doula.html`. NICU support has no set price; its card appears on `services.html` and `nicu-doula.html`. The **hospital list** appears on `nicu-doula.html`, `high-risk-pregnancy-doula.html`, and in the Services FAQ. Search all files for the old text when you change either.
 - **New article:** copy `research/waterbirth.html`, edit it, add a card to `research/index.html`, and add a line to `sitemap.xml`.
 
 ## Preview on your computer
