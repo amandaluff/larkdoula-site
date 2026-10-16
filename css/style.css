@@ -237,9 +237,6 @@ li::marker { color: var(--terracotta); }
 .home-hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.3rem); }
 
 /* Photo beside a page heading (NICU and high-risk pages) */
-.hero-image { margin: 0; position: relative; justify-self: stretch; }
-.hero-image::before { content: ""; position: absolute; inset: 1.25rem -1.25rem -1.25rem 1.25rem; border-radius: var(--radius); background: var(--turquoise); opacity: 0.14; }
-.hero-image img { position: relative; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
 /* Photos marked "compact" stay small when the page is a single column (NICU page) */
 .photo.compact { max-width: 28rem; }
 @media (max-width: 54rem) {
@@ -333,8 +330,8 @@ li::marker { color: var(--terracotta); }
 .birds.left { margin-left: 0; }
 /* Tall Meet Amanda photos: keep them a moderate size when the columns stack on smaller screens */
 @media (max-width: 49.99rem) { .photo.portrait { max-width: 19rem; margin-inline: auto; } }
-/* Photos beside text: keep them a moderate size when the columns stack (Services packages on phones, high-risk page top) */
-@media (max-width: 53.99rem) { .package-group .photo img, .hero-image { max-width: 22rem; } }
+/* Photos beside text: keep them a moderate size when the columns stack (Services packages on phones) */
+@media (max-width: 53.99rem) { .package-group .photo img { max-width: 22rem; } }
 .closing { text-align: center; }
 .closing .lead { color: inherit; }
 
