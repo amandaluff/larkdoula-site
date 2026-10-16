@@ -26,11 +26,11 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 ## Editing
 
 - **Text, prices, resources:** open the page's `.html` file, find the text, change it, save. Comments like `<!-- To change a price… -->` mark the common spots.
-- **After changing `css/style.css` or `js/site.js`:** raise the `?v=15` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
+- **After changing `css/style.css` or `js/site.js`:** raise the `?v=16` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
 - **Menu and footer** are repeated in every page, so a menu change has to be made in each file. The menu is Home, Meet Amanda, Services, NICU Support, Resources; the Contact button sits on its own in the header's top corner (`header-contact`), not in the menu list. The page you're on gets `aria-current="page"` on its menu link (or on the Contact button, on the Contact page).
 - **Search result text:** each page's `<title>` and `<meta name="description">` near the top are what Google shows.
 - **Prices and FAQ on the Services page** also appear in the "Structured data" block near the top of `services.html`. Change both places.
-- **Birth and prenatal package prices are repeated** on `high-risk-pregnancy-doula.html`. NICU support has no set price; its card appears on `services.html` and `nicu-doula.html`. The **hospital list** appears on `nicu-doula.html`, `high-risk-pregnancy-doula.html`, and in the Services FAQ. Search all files for the old text when you change either.
+- **Package prices appear only on `services.html`** (in the page and its structured-data block). The high-risk page links to Services instead of repeating them. NICU support has no set price; its card appears on `services.html` and `nicu-doula.html`. The **hospital list** appears on `nicu-doula.html`, `high-risk-pregnancy-doula.html`, and in the Services FAQ. Search all files for the old text when you change either.
 - **New article:** copy `research/waterbirth.html`, edit it, add a card to `research/index.html`, and add a line to `sitemap.xml`.
 
 ## Preview on your computer
