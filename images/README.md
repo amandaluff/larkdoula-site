@@ -11,7 +11,7 @@ Put these files in this folder, with exactly these names:
 | `amanda-seated.jpg` | Home (Meet Amanda) | Seated outdoor portrait |
 | `amanda-conference.jpg` | Home (Meet Amanda) | Presenting at a conference |
 | `amanda-cake.jpg`, `amanda-domes.jpg` | Home (Meet Amanda, "Outside of work") | Two personal photos |
-| `birds.png` | Home, Services, NICU and high-risk pages (closing bands), Meet Amanda (credentials card) | The two birds from the logo, transparent background |
+| `birds.png` | Home, Services, NICU and high-risk pages (closing bands), Meet Amanda (above "Why Lark Doula?") | The two birds from the logo, transparent background |
 | `flower-buds.jpg` | Services (Pregnancy & Birth) | Pink flower buds |
 | `lake-sunrise.jpg` | Services (NICU Support) | Sunrise over Lake Michigan |
 | `nicu-hand-and-feet.jpg` | NICU page (top) | Amanda's hand cradling Melody's feet in the NICU (no face; a supply packet was edited out) |
