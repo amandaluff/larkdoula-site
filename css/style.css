@@ -73,8 +73,11 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(251, 248, 243, 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); }
-.nav-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 2rem; padding: 0.6rem 0; }
-.brand { margin-right: auto; display: block; }
+/* Header: logo on the left, Contact button in the top corner, menu underneath it */
+.nav-bar { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "brand contact" "brand nav"; align-items: center; gap: 0.4rem 2rem; padding: 0.6rem 0; }
+.brand { grid-area: brand; display: block; }
+.header-contact { grid-area: contact; justify-self: end; }
+.nav-bar nav { grid-area: nav; justify-self: end; }
 .brand img { height: 3.25rem; width: auto; }
 .nav-bar ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; margin: 0; padding: 0; }
 .nav-bar ul a { font-size: 1rem; font-weight: 500; color: var(--ink); text-decoration: none; padding: 0.35rem 0; border-bottom: 2px solid transparent; }
@@ -83,7 +86,6 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 @media (max-width: 52rem) {
   .site-header { position: static; }
   .nav-bar { gap: 0.25rem 0.5rem; }
-  .nav-bar nav { order: 3; width: 100%; }
   .nav-bar ul { gap: 0.1rem 1.25rem; }
   .brand img { height: 2.4rem; }
   .nav-bar .button.small { padding: 0.5rem 0.9rem; font-size: 0.9rem; }
@@ -130,6 +132,7 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 .card.accent { border-top: 3px solid var(--terracotta); }
 .card ul { margin: 0 0 1rem; padding-left: 1.15rem; }
 .card li { margin-bottom: 0.4rem; }
+.card li > ul { margin: 0.4rem 0 0; }
 li::marker { color: var(--terracotta); }
 
 /* Call-to-action band */
@@ -141,7 +144,9 @@ li::marker { color: var(--terracotta); }
 /* Services */
 .package-group { display: grid; gap: 2rem 3.5rem; align-items: start; }
 .package-group + .package-group { margin-top: clamp(3rem, 6vw, 4.5rem); }
-@media (min-width: 54rem) { .package-group { grid-template-columns: 0.9fr 1.1fr; } }
+/* Package photo stays beside the packages on mid-size screens, like the NICU page photos; stacks on phones */
+@media (min-width: 40rem) { .package-group { grid-template-columns: minmax(13rem, 0.8fr) 1.2fr; gap: 2rem 2.25rem; } }
+@media (min-width: 54rem) { .package-group { grid-template-columns: 0.9fr 1.1fr; gap: 2rem 3.5rem; } }
 .package-group .photo img { aspect-ratio: 4 / 3; object-fit: cover; }
 .package-group .photo h2 { margin: 1.25rem 0 0; }
 .package-list { display: grid; gap: 1.25rem; }
@@ -326,10 +331,10 @@ li::marker { color: var(--terracotta); }
 .birds { width: 5rem; height: auto; margin: 0 auto 1.5rem; opacity: 0.85; }
 .birds.light { filter: brightness(0) invert(1); opacity: 0.7; }
 .birds.left { margin-left: 0; }
-/* Smaller birds splitting a list inside a card (Meet Amanda credentials) */
-.card .birds { width: 4rem; margin: 0 auto 1rem; }
 /* Tall Meet Amanda photos: keep them a moderate size when the columns stack on smaller screens */
 @media (max-width: 49.99rem) { .photo.portrait { max-width: 19rem; margin-inline: auto; } }
+/* Photos beside text: keep them a moderate size when the columns stack (Services packages on phones, high-risk page top) */
+@media (max-width: 53.99rem) { .package-group .photo img, .hero-image { max-width: 22rem; } }
 .closing { text-align: center; }
 .closing .lead { color: inherit; }
 
@@ -456,8 +461,18 @@ h3, .package h3, .resource h3, .article-card h3, .offers h3, .do-dont h3, .faq s
 .site-footer h2 { font-size: 1rem; }
 .story-quote figcaption, .hero-photo figcaption { font-size: 1.15rem; }
 
-/* "Contact" in the menu is the button */
+/* The Contact button in the header's top corner, the same size as the menu text */
 .nav-bar ul { align-items: center; }
-.nav-bar ul a.button, .nav-bar ul a.button.small { font-size: 1.3rem; font-weight: 500; color: #fff; padding: 0.4rem 1.3rem 0.5rem; border: 1.5px solid var(--turquoise); border-radius: 999px; }
-.nav-bar ul a.button:hover { color: #fff; background: var(--turquoise-dark); border-color: var(--turquoise-dark); }
-.nav-bar ul a.button[aria-current="page"] { color: #fff; border-color: var(--turquoise); background: var(--turquoise-dark); }
+.nav-bar a.button.header-contact { font-size: 1.4rem; font-weight: 500; color: #fff; padding: 0.35rem 1.3rem 0.45rem; border: 1.5px solid var(--turquoise); border-radius: 999px; }
+.nav-bar a.button.header-contact:hover { color: #fff; background: var(--turquoise-dark); border-color: var(--turquoise-dark); }
+.nav-bar a.button.header-contact[aria-current="page"] { color: #fff; border-color: var(--turquoise); background: var(--turquoise-dark); }
+@media (max-width: 52rem) { .nav-bar a.button.header-contact { font-size: 1.3rem; } }
+
+
+/* Narrower windows: the menu gets its own row under the logo, Contact stays in the corner */
+@media (max-width: 60rem) {
+  .nav-bar { grid-template-areas: "brand contact" "nav nav"; }
+  .nav-bar nav { justify-self: start; }
+}
+/* The header is taller in this range, so jump links stop a little lower */
+@media (min-width: 52.01rem) and (max-width: 60rem) { html { scroll-padding-top: 9.5rem; } }
