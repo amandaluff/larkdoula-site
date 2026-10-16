@@ -25,7 +25,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"></noscript>
   <!-- The ?v= number makes browsers fetch the newest stylesheet. Raise it whenever css/style.css changes. -->
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=13">
 
   <!-- Structured data: tells search engines what this page is about -->
   <script type="application/ld+json">
@@ -95,9 +95,38 @@
     }
   ],
   "founder": {
-    "@id": "https://www.larkdoula.com/about#amanda"
+    "@id": "https://www.larkdoula.com/#amanda"
   },
   "sameAs": [
+    "https://www.bornbir.com/amanda-luff"
+  ]
+}
+  </script>
+  <!-- Structured data about Amanda (the "Meet Amanda" section) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.larkdoula.com/#amanda",
+  "name": "Amanda Luff",
+  "honorificSuffix": "PhD, MPH",
+  "url": "https://www.larkdoula.com/#about",
+  "image": "https://www.larkdoula.com/images/amanda-seated.jpg",
+  "jobTitle": "Birth Doula",
+  "hasCredential": [
+    "Certified Birth Doula, Madriella Doula Network",
+    "Certified Postpartum Doula, Madriella Doula Network",
+    "Childbirth Educator Certification, Madriella Doula Network",
+    "Breastfeeding Educator Certification, Madriella Doula Network",
+    "PhD in Public Health, Epidemiology",
+    "MPH in Public Health, Epidemiology",
+    "Trauma-Informed Care, Madriella Doula Network"
+  ],
+  "worksFor": {
+    "@id": "https://www.larkdoula.com/#business"
+  },
+  "sameAs": [
+    "https://medium.com/@amanda.luff13",
     "https://www.bornbir.com/amanda-luff"
   ]
 }
@@ -112,7 +141,7 @@
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
   <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
-  <script defer src="js/site.js?v=12"></script>
+  <script defer src="js/site.js?v=13"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -123,7 +152,7 @@
       <nav aria-label="Main">
         <ul>
           <li><a href="./" aria-current="page">Home</a></li>
-          <li><a href="about">Meet Amanda</a></li>
+          <li><a href="#about">Meet Amanda</a></li>
           <li><a href="resources">Resources</a></li>
           <li><a href="services">Services</a></li>
           <li><a class="button small" href="contact">Contact</a></li>
@@ -147,7 +176,7 @@
             <a class="button" href="contact">Reach Out</a>
           </p>
           <p>We'll start with a free, no-obligation conversation.</p>
-          <p><a href="about">More about me</a> &nbsp;&middot;&nbsp; <a href="services">Services &amp; pricing</a></p>
+          <p><a href="#about">More about me</a> &nbsp;&middot;&nbsp; <a href="services">Services &amp; pricing</a></p>
         </div>
         <figure class="hero-photo">
           <img src="images/amanda-portrait.jpg" alt="Amanda Luff, PhD, doula and founder of Lark Doula in Milwaukee, smiling outdoors." width="900" height="860" fetchpriority="high">
@@ -192,6 +221,70 @@
       </div>
     </section>
 
+    <section id="about">
+      <div class="wrap">
+        <h2>Meet Amanda</h2>
+      </div>
+      <div class="wrap two-col">
+        <figure class="photo portrait sticky">
+          <img src="images/amanda-seated.jpg" alt="Amanda Luff seated outdoors, wearing glasses and a turquoise sweater." width="721" height="1024">
+        </figure>
+        <div>
+          <p class="lead">I have been working in maternal and child health for over a decade as an educator and advocate.</p>
+          <p>My path to becoming a doula came from my own experience. I had a "low risk" pregnancy and planned for an unmedicated, low-intervention birth. However, my baby and I experienced severe complications, and my plans went out the window. I worked for the hospital where I gave birth and I knew my OBGYN and midwife professionally. Even with all of my knowledge, I felt lost navigating the NICU, my own recovery, and my transition to parenthood.</p>
+          <p class="pull">My goal is to be the support for others that I wish I had.</p>
+          <p>Even when we feel fully prepared, pregnancy and birth can be complicated to navigate. Having a dedicated support person to talk through what you are experiencing ensures you have the information and space to make the best choices for your family.</p>
+
+          <h2 style="margin-top: 1.75em">What you can expect from me</h2>
+          <p>I listen first. I won't tell you what your birth should look like, and I won't judge the choices you make. I'll help you understand your options, prepare your questions, and feel supported in whatever you decide.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sand">
+      <div class="wrap two-col wide-left">
+        <div>
+          <div class="card accent">
+            <h2>My Experience</h2>
+            <ul>
+              <li>Certified Birth Doula, Madriella Doula Network</li>
+              <li>Certified Postpartum Doula, Madriella Doula Network</li>
+              <li>Childbirth Educator Certification, Madriella Doula Network</li>
+              <li>Breastfeeding Educator Certification, Madriella Doula Network</li>
+              <li>Trauma-Informed Care, Madriella Doula Network</li>
+            </ul>
+            <img class="birds" src="images/birds.png" alt="Two birds from the Lark Doula logo" aria-hidden="true" width="480" height="242">
+            <ul>
+              <li>PhD and MPH in Public Health, Epidemiology</li>
+              <li>Assistant Professor of Obstetrics &amp; Gynecology</li>
+            </ul>
+          </div>
+
+          <h2 style="margin-top: 2.5rem">Why "Lark" Doula?</h2>
+          <p>The boring answer is Lark is the word I came up with when I mashed up my last name with my husband's.</p>
+          <p>It resonated with me because larks are songbirds, and my daughter, Melody, is why I do this work.</p>
+          <p>I hope it resonates with you because larks symbolize new beginnings and self-discovery, a journey I hope we can embark on together.</p>
+          <p class="actions"><a class="button" href="services">See Services</a></p>
+        </div>
+        <figure class="photo portrait">
+          <img src="images/amanda-conference.jpg" alt="Amanda Luff presenting at a maternal and child health conference." width="800" height="1303" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap two-col even">
+        <div>
+          <h2>Outside of work</h2>
+          <p class="lead">I'm an Ohio native and have lived in Milwaukee since 2021 with my husband, our daughter, Melody, and our cat, Leo.</p>
+          <p>You'll usually find me outdoors, trying a new gluten-free recipe, or in the middle of a creative project.</p>
+        </div>
+        <div class="snapshots">
+          <img src="images/amanda-cake.jpg" alt="Amanda smiling at a picnic table with a cake decorated with small icing carrots." width="769" height="964" loading="lazy">
+          <img src="images/amanda-domes.jpg" alt="Amanda smiling in front of the Mitchell Park Domes in Milwaukee." width="595" height="795" loading="lazy">
+        </div>
+      </div>
+    </section>
     <section>
       <div class="wrap narrow closing">
         <img class="birds" src="images/birds.png" alt="Two birds from the Lark Doula logo" aria-hidden="true" width="480" height="242">
@@ -228,7 +321,7 @@
           <h2>Pages</h2>
           <ul>
           <li><a href="./">Home</a></li>
-          <li><a href="about">Meet Amanda</a></li>
+          <li><a href="#about">Meet Amanda</a></li>
           <li><a href="resources">Resources</a></li>
           <li><a href="services">Services</a></li>
           <li><a href="contact">Contact</a></li>

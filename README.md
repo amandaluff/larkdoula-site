@@ -6,8 +6,7 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 
 | File | Page |
 |---|---|
-| `index.html` | Home |
-| `about.html` | Meet Amanda (`/about`) |
+| `index.html` | Home, including the Meet Amanda section (`/#about`) |
 | `services.html` | Services & Pricing (`/services`) |
 | `nicu-doula.html` | NICU doula page (`/nicu-doula`) |
 | `high-risk-pregnancy-doula.html` | High-risk pregnancy page (`/high-risk-pregnancy-doula`) |
@@ -20,13 +19,14 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 | `css/style.css` | All colors, fonts and layout. The palette is the list of variables at the top. |
 | `images/` | Photos and logo (see `images/README.md`) |
 | `home.html` | Sends the old Google Sites address `/home` to the home page |
+| `about.html` | Sends the old address `/about` to the Meet Amanda section of the home page |
 | `404.html` | "Page not found" page |
 | `sitemap.xml`, `robots.txt` | Help search engines find every page |
 
 ## Editing
 
 - **Text, prices, resources:** open the page's `.html` file, find the text, change it, save. Comments like `<!-- To change a price… -->` mark the common spots.
-- **After changing `css/style.css` or `js/site.js`:** raise the `?v=12` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
+- **After changing `css/style.css` or `js/site.js`:** raise the `?v=13` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
 - **Menu and footer** are repeated in every page, so a menu change has to be made in each file.
 - **Search result text:** each page's `<title>` and `<meta name="description">` near the top are what Google shows.
 - **Prices and FAQ on the Services page** also appear in the "Structured data" block near the top of `services.html`. Change both places.

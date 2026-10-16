@@ -8,10 +8,10 @@ Put these files in this folder, with exactly these names:
 | `social-card.jpg` | Link previews (texts, social media) | 1200 x 630 card: logo, tagline, service words |
 | `favicon.png` | Browser tab, menu bar | Small square bird mark |
 | `amanda-portrait.jpg` | Home | Close-up outdoor portrait |
-| `amanda-seated.jpg` | Meet Amanda | Seated outdoor portrait |
-| `amanda-conference.jpg` | Meet Amanda | Presenting at a conference |
-| `amanda-cake.jpg`, `amanda-domes.jpg` | Meet Amanda ("Outside of work") | Two personal photos |
-| `birds.png` | Home, Services, NICU and high-risk pages (closing bands), About (credentials card) | The two birds from the logo, transparent background |
+| `amanda-seated.jpg` | Home (Meet Amanda) | Seated outdoor portrait |
+| `amanda-conference.jpg` | Home (Meet Amanda) | Presenting at a conference |
+| `amanda-cake.jpg`, `amanda-domes.jpg` | Home (Meet Amanda, "Outside of work") | Two personal photos |
+| `birds.png` | Home, Services, NICU and high-risk pages (closing bands), Meet Amanda (credentials card) | The two birds from the logo, transparent background |
 | `flower-buds.jpg` | Services (Pregnancy & Birth) | Pink flower buds |
 | `lake-sunrise.jpg` | Services (NICU Support) | Sunrise over Lake Michigan |
 | `research-waterbirth.jpg` | Research index + waterbirth article | Article photo |
