@@ -235,6 +235,21 @@ li::marker { color: var(--terracotta); }
 .hero-image { margin: 0; position: relative; justify-self: stretch; }
 .hero-image::before { content: ""; position: absolute; inset: 1.25rem -1.25rem -1.25rem 1.25rem; border-radius: var(--radius); background: var(--turquoise); opacity: 0.14; }
 .hero-image img { position: relative; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+/* Photos marked "compact" stay small when the page is a single column (NICU page) */
+.photo.compact { max-width: 28rem; }
+@media (max-width: 54rem) {
+  .photo.compact { max-width: 16rem; }
+}
+/* "offset" adds the same tinted rectangle behind a photo as the hero image */
+.photo.offset { position: relative; margin-right: 1.25rem; margin-bottom: 1.25rem; }
+.photo.offset::before { content: ""; position: absolute; inset: 1.25rem -1.25rem -1.25rem 1.25rem; border-radius: var(--radius); background: var(--turquoise); opacity: 0.14; }
+.photo.offset img { position: relative; box-shadow: none; }
+/* A card with a photo beside the text (NICU page) */
+.feature-card { margin-top: 2.5rem; display: grid; gap: 1.5rem 2.25rem; align-items: center; }
+.feature-card h2, .feature-card h3 { margin-top: 0; margin-bottom: 0.6rem; }
+.flow > .feature-card:first-child { margin-top: 0; }
+.feature-card p { margin: 0; }
+@media (min-width: 40rem) { .feature-card { grid-template-columns: 13rem 1fr; } }
 
 /* Icons */
 .icon { width: 2.5rem; height: 2.5rem; padding: 0.55rem; margin-bottom: 1rem; border-radius: 50%; background: var(--sand); fill: none; stroke: var(--terracotta); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }

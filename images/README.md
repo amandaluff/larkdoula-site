@@ -14,6 +14,8 @@ Put these files in this folder, with exactly these names:
 | `birds.png` | Home, Services, NICU and high-risk pages (closing bands), Meet Amanda (credentials card) | The two birds from the logo, transparent background |
 | `flower-buds.jpg` | Services (Pregnancy & Birth) | Pink flower buds |
 | `lake-sunrise.jpg` | Services (NICU Support) | Sunrise over Lake Michigan |
+| `nicu-hand-and-feet.jpg` | NICU page (top) | Amanda's hand cradling Melody's feet in the NICU (no face; a supply packet was edited out) |
+| `nicu-colostrum.jpg` | NICU page (after "How I can help") | Amanda's hand holding two syringes of colostrum |
 | `research-waterbirth.jpg` | Research index + waterbirth article | Article photo |
 | `research-doula-evidence.jpg` | Research index + doula evidence article | Article photo |
 

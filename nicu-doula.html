@@ -25,7 +25,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"></noscript>
   <!-- The ?v= number makes browsers fetch the newest stylesheet. Raise it whenever css/style.css changes. -->
-  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/style.css?v=14">
 
   <!-- Structured data: tells search engines what this page is about -->
   <script type="application/ld+json">
@@ -39,29 +39,7 @@
   },
   "areaServed": "Milwaukee County, Wisconsin",
   "url": "https://www.larkdoula.com/nicu-doula",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "NICU Essentials",
-        "price": "450",
-        "priceCurrency": "USD"
-      },
-      {
-        "@type": "Offer",
-        "name": "Extended NICU Support",
-        "price": "250",
-        "priceCurrency": "USD"
-      },
-      {
-        "@type": "Offer",
-        "name": "NICU to Home",
-        "price": "350",
-        "priceCurrency": "USD"
-      }
-    ]
-  }
+  "description": "Support for families before, during, and after a NICU stay, built around each family's needs."
 }
   </script>
 
@@ -74,7 +52,7 @@
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
   <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
-  <script defer src="js/site.js?v=13"></script>
+  <script defer src="js/site.js?v=14"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -97,36 +75,43 @@
   </header>
 
   <main id="main">
-    <section class="home-hero">
-      <div class="wrap hero-grid">
-        <div>
-          <h1 class="kicker">NICU doula support in Milwaukee</h1>
-          <p class="display">You don't have to figure this out alone.</p>
-          <p class="lead">You don't need to have planned for a doula. I support families at any point in a NICU stay, from the first days through the transition home.</p>
-          <p class="actions">
-            <a class="button" href="tel:+14142853445">Call or Text (414) 285-3445</a>
-          </p>
-        </div>
-        <figure class="hero-image">
-          <img src="images/lake-sunrise.jpg" alt="Sunrise over Lake Michigan">
-        </figure>
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>NICU Doula Support</h1>
+        <p class="lead">Babies go to the NICU for many reasons: being born early, needing help with breathing or blood sugar, jaundice, or a diagnosis. Some stays last a few days, others for months. Whatever brought you here, this support is for you.</p>
       </div>
     </section>
 
     <section>
       <div class="wrap flow-layout">
         <div class="flow">
-          <h2>What a NICU doula does</h2>
-          <p class="lead">Having a baby in the NICU is a lot to process. The hospital team is there to give your baby the best possible care, but it is easy for you to feel a bit lost or unsure of your place.</p>
-          <p>My role is to focus on your family. I give you a safe space to talk through how you are feeling, help you find ways to connect with your baby, and provide support so you do not have to navigate the NICU alone.</p>
+          <div class="card feature-card">
+            <figure class="photo compact offset">
+              <img src="images/nicu-hand-and-feet.jpg" alt="A parent's hand cradling a newborn's feet in the NICU">
+            </figure>
+            <div>
+              <h2>The NICU team cares for your baby. I'm here for you.</h2>
+              <p>A NICU stay is a lot to take in. I give you space to talk through how you're feeling, help you connect with your baby, and make sure you don't go through this alone.</p>
+            </div>
+          </div>
 
-          <h2>How I can help</h2>
+          <h2 id="help">How I can help</h2>
           <ul class="icon-list">
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><div><strong>Understanding</strong> what your baby's care team is telling you, and preparing questions for rounds.</div></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg><div><strong>Connecting</strong> with your baby: finding ways to bond and take part in their care.</div></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14zM5 19l7-7"/></svg><div><strong>Recovering</strong>: looking after your own recovery while your baby is in the hospital.</div></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4zM10 20v-6h4v6"/></svg><div><strong>Going home</strong>: preparing for discharge and the first weeks at home.</div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14zM5 19l7-7"/></svg><div><strong>Before birth:</strong> if your baby may need the NICU, we'll find out what to expect at your hospital and plan for your baby's first hours.</div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg><div><strong>The first days:</strong> getting ready for your first visit, caring for your own recovery, and starting to pump if that's your plan.</div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><div><strong>During the stay:</strong> questions for rounds, ways to bond before and after you can hold your baby, pumping support, and help for partners and siblings.</div></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4zM10 20v-6h4v6"/></svg><div><strong>Going home:</strong> getting ready for discharge, and support in the first weeks at home, when a lot can come up.</div></li>
           </ul>
+
+          <div class="card feature-card">
+            <figure class="photo compact offset">
+              <img src="images/nicu-colostrum.jpg" alt="A hand holding two small syringes of colostrum" loading="lazy">
+            </figure>
+            <div>
+              <h3>Lactation support in the NICU</h3>
+              <p>Pumping for a baby in the NICU often looks different from how we picture feeding our babies. From hand expressing colostrum in the first hours to a pumping plan that leaves room for sleep and recovery, I'll help you work toward your feeding goals.</p>
+            </div>
+          </div>
 
           <figure class="story-quote">
             <blockquote>My own baby spent time in the NICU. Even with my professional background, I felt lost. That experience is why I do this work.</blockquote>
@@ -142,44 +127,11 @@
         </div>
         <aside class="card accent aside-card">
           <h2>Start with a conversation</h2>
-          <p>It's free, it takes about 30 minutes, and there's no obligation. You don't need to know what kind of support you want yet.</p>
+          <p>Every NICU stay is different, so we'll work together to build a support plan that fits your family's needs.</p>
           <a class="button" href="contact">Reach Out</a>
           <p class="phone">or call/text <a href="tel:+14142853445">(414) 285-3445</a></p>
-          <p class="aside-more"><a class="arrow-link" href="#packages">See packages</a></p>
+          <p class="aside-more"><a class="arrow-link" href="services">All services</a></p>
         </aside>
-      </div>
-    </section>
-
-    <section class="sand" id="packages">
-      <div class="wrap">
-        <h2>NICU Doula Packages</h2>
-        <!-- These packages also appear on services.html. Change prices in both places. -->
-        <div class="cards">
-          <div class="card package">
-            <h3>NICU Essentials <span class="price">$450</span></h3>
-            <ul>
-              <li>Four visits at your home, the NICU (as policy allows) or virtual</li>
-              <li>Text and email support during admission, up to 8 weeks</li>
-            </ul>
-          </div>
-          <div class="card package">
-            <h3>Extended NICU Support <span class="price">$250 per 4-week extension</span></h3>
-            <ul>
-              <li>For stays longer than 8 weeks, added on to NICU Essentials</li>
-              <li>Two additional visits per extension</li>
-              <li>Text and email support continues for 4 more weeks</li>
-            </ul>
-          </div>
-          <div class="card package">
-            <h3>NICU to Home <span class="price">$350</span></h3>
-            <ul>
-              <li>Pre-discharge planning visit</li>
-              <li>Two post-discharge visits</li>
-              <li>Text and email support until 4 weeks after discharge</li>
-            </ul>
-          </div>
-        </div>
-        <p style="margin: 2rem 0 0"><a class="arrow-link" href="services">All services &amp; pricing</a></p>
       </div>
     </section>
 
@@ -189,7 +141,7 @@
         <h2>How it works</h2>
         <ol class="steps">
           <li><h3>Reach out</h3><p>Call, text, or fill out the inquiry form. I typically respond within one business day.</p></li>
-          <li><h3>A free conversation</h3><p>We take about 30 minutes to make sure we are a good match and find the right services for your family. There's no obligation.</p></li>
+          <li><h3>A conversation</h3><p>We take about 30 minutes to make sure we are a good match and find the right support for your family.</p></li>
           <li><h3>Support begins</h3><p>Visits at the hospital, at home, or virtually, with text and email support between visits.</p></li>
         </ol>
         <p style="margin: 2.5rem 0 0"><a class="button light" href="contact">Reach Out</a></p>
