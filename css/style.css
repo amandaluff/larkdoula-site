@@ -473,3 +473,24 @@ h3, .package h3, .resource h3, .article-card h3, .offers h3, .do-dont h3, .faq s
 }
 /* The header is taller in this range, so jump links stop a little lower */
 @media (min-width: 52.01rem) and (max-width: 60rem) { html { scroll-padding-top: 9.5rem; } }
+
+/* Studies from My Posts (/studies): a small square post image beside each study, kept beside the text down to phone width */
+.study-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; max-width: 52rem; }
+.study { display: grid; grid-template-columns: 6rem 1fr; grid-template-areas: "img head" "body body"; gap: 1rem 1.25rem; align-items: center; padding: 1.25rem; }
+.study img { grid-area: img; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
+.study-head { grid-area: head; }
+.study-body { grid-area: body; }
+.study h2 { font-size: 1.5rem; line-height: 1.2; margin: 0; }
+.study p { margin: 0 0 0.6rem; }
+.study .eyebrow { margin-bottom: 0.3rem; }
+.study .source { font-size: 1.05rem; color: var(--ink); }
+@media (min-width: 40rem) {
+  .study { grid-template-columns: 9rem 1fr; grid-template-areas: "img head" "img body"; align-items: start; gap: 0.75rem 1.75rem; padding: 1.75rem; }
+  .study h2 { font-size: 1.7rem; }
+}
+.paper-list { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 1.25rem; max-width: 52rem; }
+.paper-list a, .paper-list .paper-title { font-size: 1.3rem; font-weight: 600; text-decoration: none; }
+.paper-list .paper-title { color: var(--turquoise-dark); display: block; }
+.paper-list .source { margin: 0.25rem 0 0; font-size: 1.05rem; color: var(--ink); }
+#my-research h3 { margin: 2.25rem 0 0; font-size: 1.5rem; }
+#my-research h3 + .paper-list { margin-top: 1rem; padding-left: 1.25rem; }
