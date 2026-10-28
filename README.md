@@ -27,7 +27,7 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 ## Editing
 
 - **Text, prices, resources:** open the page's `.html` file, find the text, change it, save. Comments like `<!-- To change a price… -->` mark the common spots.
-- **After changing `css/style.css` or `js/site.js`:** raise the `?v=17` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
+- **After changing `css/style.css` or `js/site.js`:** raise the `?v=21` number on the two lines that load them near the top of every page (search all files for `?v=`). Otherwise returning visitors may briefly see the old styling.
 - **Menu and footer** are repeated in every page, so a menu change has to be made in each file. The menu is Home, Meet Amanda, Services, NICU Support, Resources; the Contact button sits on its own in the header's top corner (`header-contact`), not in the menu list. The page you're on gets `aria-current="page"` on its menu link (or on the Contact button, on the Contact page).
 - **Meta Pixel** (added 2026-10-18, ID 28181774864834951) sits just above `</head>` in every page that has the Google Analytics tag, and tracks page views only. The noscript image fallback was left out (it needs an `img` with no real alt text). The privacy notice describes it; keep the two in step. New pages need it too.
 - **Search result text:** each page's `<title>` and `<meta name="description">` near the top are what Google shows.
