@@ -136,7 +136,7 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 li::marker { color: var(--terracotta); }
 
 /* Call-to-action band */
-.band { background: var(--turquoise-dark); color: #eef3f2; }
+.band { background: var(--turquoise); color: #eef3f2; } /* lighter than the footer so the two don't merge */
 .band h2 { color: #fff; }
 .band a:not(.button) { color: #fff; }
 .band .two-col { align-items: center; }
@@ -149,9 +149,11 @@ li::marker { color: var(--terracotta); }
 @media (min-width: 54rem) { .package-group { grid-template-columns: 0.9fr 1.1fr; gap: 2rem 3.5rem; } }
 .package-group .photo img { aspect-ratio: 4 / 3; object-fit: cover; }
 .package-group .photo h2 { margin: 1.25rem 0 0; }
+.package-note { max-width: 22rem; margin: 1.5rem 0 0; padding-left: 1rem; border-left: 2px solid var(--terracotta); font-size: 1.25rem; line-height: 1.5; }
+.package-note strong { display: block; margin-bottom: 0.25rem; font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--turquoise-dark); }
 .package-list { display: grid; gap: 1.25rem; }
 .package h3 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.25rem 1rem; margin-bottom: 0.75rem; }
-.package .price { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
+.package .price { margin-left: auto; font-family: var(--sans); font-size: 1.05rem; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
 
 .faq details { border-bottom: 1px solid var(--rule); }
 .faq details:first-of-type { border-top: 1px solid var(--rule); }
@@ -160,12 +162,16 @@ li::marker { color: var(--terracotta); }
 .faq summary::after { content: "+"; font-family: var(--sans); font-weight: 400; color: var(--terracotta); }
 .faq details[open] summary::after { content: "\2212"; }
 .faq details p { margin: 0 0 1.25rem; max-width: 40rem; }
+.faq details p.faq-label { margin: 0 0 0.35rem; font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--turquoise-dark); }
 
 /* Resources */
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 1.5rem 0 0; }
 .chips a { display: block; padding: 0.4rem 0.95rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); font-size: 0.95rem; font-weight: 500; text-decoration: none; }
 .chips a:hover { border-color: var(--turquoise); color: var(--turquoise); }
 .resource-group + .resource-group { margin-top: 3.5rem; }
+/* Every other category sits on a full-width sand band, so the long page isn't one flat column */
+.resource-group:nth-of-type(even) { background: var(--sand); box-shadow: 0 0 0 100vmax var(--sand); clip-path: inset(-3rem -100vmax); padding-block: 0.5rem; }
+.resource-group:nth-of-type(even) + .resource-group, .resource-group + .resource-group:nth-of-type(even) { margin-top: 6rem; }
 .resource-group .cards { margin-top: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
 .resource h3 { font-size: 1.4rem; }
 .resource .meta { font-size: 0.95rem; color: var(--muted); margin-top: auto; padding-top: 0.5rem; }
@@ -332,6 +338,21 @@ li::marker { color: var(--terracotta); }
 @media (max-width: 49.99rem) { .photo.portrait { max-width: 19rem; margin-inline: auto; } }
 /* Photos beside text: keep them a moderate size when the columns stack (Services packages on phones) */
 @media (max-width: 53.99rem) { .package-group .photo img { max-width: 22rem; } }
+/* Phones: heading, then the packages, then the link and note. The photo stays as a short banner on top. */
+@media (max-width: 39.99rem) {
+  .package-group { gap: 0; }
+  .package-group .photo { display: contents; }
+  .package-group .photo img { order: 1; max-width: none; aspect-ratio: 16 / 9; }
+  .package-group .photo h2 { order: 2; margin: 1.25rem 0 1.25rem; }
+  .package-group .package-list { order: 3; }
+  .package-group .photo > p { order: 4; margin-top: 1.25rem !important; }
+  .package-group .photo > .package-note { order: 5; }
+}
+/* Price on its own line under the package name until the cards are wide enough to fit both. */
+@media (max-width: 53.99rem) {
+  .package h3 { display: block; }
+  .package .price { display: block; margin-top: 0.25rem; }
+}
 .closing { text-align: center; }
 .closing .lead { color: inherit; }
 
@@ -356,6 +377,14 @@ h1.kicker, .home-hero h1.kicker { font-family: var(--sans); font-size: 0.85rem; 
 .display { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, 5.2vw, 3.9rem); line-height: 1.08; letter-spacing: -0.01em; color: var(--turquoise-dark); margin: 0 0 0.5em; text-wrap: balance; }
 .subtitle { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--terracotta); margin: -0.25rem 0 1rem; }
 .home-hero .actions { margin-bottom: 1.25rem; }
+/* Phones and tablets: the photo comes right after the greeting instead of below all the text */
+@media (max-width: 53.99rem) {
+  .home-hero .hero-grid { gap: 0; }
+  .home-hero .hero-grid > div { display: contents; }
+  .home-hero .hero-grid > div > * { order: 3; }
+  .home-hero .hero-grid > div > .kicker, .home-hero .hero-grid > div > .display { order: 1; }
+  .home-hero .hero-photo { order: 2; max-width: 15rem; justify-self: start; margin: 0.5rem 0 2.25rem; }
+}
 
 /* Two personal photos at the end of Meet Amanda */
 .snapshots { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: start; }
