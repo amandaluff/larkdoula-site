@@ -33,6 +33,7 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 - **Search result text:** each page's `<title>` and `<meta name="description">` near the top are what Google shows.
 - **Prices and FAQ on the Services page** also appear in the "Structured data" block near the top of `services.html`. Change both places.
 - **Package prices appear only on `services.html`** (in the page and its structured-data block). The high-risk page links to Services instead of repeating them. NICU support has no set price; its card appears on `services.html` and `nicu-doula.html`. The **hospital list** appears on `nicu-doula.html`, `high-risk-pregnancy-doula.html`, and in the Services FAQ. Search all files for the old text when you change either.
+- **Style notes (2026-10-28):** `.package-note` is the bordered note in a Services package column ("Neither package fits?"); `.faq-label` is the small heading inside an FAQ answer. Bands (`.band`) use the lighter green so they don't run into the dark-green footer. In the Resource Guide, every other category (`.resource-group`) gets a full-width sand background automatically, so new sections need no extra class.
 - **New article:** copy `research/waterbirth.html`, edit it, add a card to `research/index.html`, and add a line to `sitemap.xml`.
 
 ## Preview on your computer
