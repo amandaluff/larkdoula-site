@@ -21,6 +21,7 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 | `images/` | Photos and logo (see `images/README.md`) |
 | `home.html` | Sends the old Google Sites address `/home` to the home page |
 | `about.html` | Sends the old address `/about` to the Meet Amanda section of the home page |
+| `milwaukee-resources.html` | Sends the old Google Sites address `/milwaukee-resources` to the Resource Guide |
 | `404.html` | "Page not found" page |
 | `sitemap.xml`, `robots.txt` | Help search engines find every page |
 
