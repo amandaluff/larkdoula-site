@@ -154,6 +154,8 @@ li::marker { color: var(--terracotta); }
 .package-note strong { display: block; margin-bottom: 0.25rem; font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--turquoise-dark); }
 .package-list { display: grid; gap: 1.25rem; }
 .package h3 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.25rem 1rem; margin-bottom: 0.75rem; }
+.package .package-fit { margin: 0; font-style: italic; font-size: 1.05rem; }
+.package ul:has(+ .package-fit) { margin-bottom: 0.4rem; }
 .package .price { margin-left: auto; font-family: var(--sans); font-size: 1.05rem; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
 
 .faq details { border-bottom: 1px solid var(--rule); }
@@ -398,6 +400,9 @@ h1.kicker, .home-hero h1.kicker { font-family: var(--sans); font-size: 0.85rem; 
    short stand-alone statements centred under the birds. */
 .lead, .card, .card ul, .package li, .faq details p, .fee-note, .article p, .pull + p { font-size: 1.3rem; line-height: 1.55; }
 .page-hero .lead, .closing .lead { font-size: 1.5rem; line-height: 1.45; }
+/* Package cards are lists of short items, so they use tighter spacing */
+.package li { line-height: 1.35; margin-bottom: 0.3rem; }
+.package .package-fit { line-height: 1.35; }
 .byline { font-size: 0.95rem; }
 .article .eyebrow, .author-box .eyebrow { font-size: 0.85rem; line-height: 1.4; }
 
