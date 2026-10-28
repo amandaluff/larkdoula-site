@@ -25,7 +25,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"></noscript>
   <!-- The ?v= number makes browsers fetch the newest stylesheet. Raise it whenever css/style.css changes. -->
-  <link rel="stylesheet" href="css/style.css?v=22">
+  <link rel="stylesheet" href="css/style.css?v=23">
 
   <!-- Structured data: tells search engines what this page is about -->
   <script type="application/ld+json">
@@ -43,17 +43,24 @@
     "itemListElement": [
       {
         "@type": "Offer",
-        "name": "Prenatal & Postpartum Package",
-        "price": "550",
-        "priceCurrency": "USD",
-        "description": "Two individual prenatal visits tailored to your care plan, including birth preferences planning; Two individual postpartum visits; Text and phone support until 6 weeks after birth"
-      },
-      {
-        "@type": "Offer",
         "name": "Birth Doula Package",
         "price": "1200",
         "priceCurrency": "USD",
-        "description": "Continuous in-person support during active labor and birth; Two individual prenatal visits tailored to your care plan; One individual postpartum visit; On-call availability starting at 37 weeks; Text and phone support until 6 weeks after birth"
+        "description": "Continuous in-person support during birth; Two prenatal visits; One postpartum visit; On call from 37 weeks; Text and phone support for 6 weeks after birth"
+      },
+      {
+        "@type": "Offer",
+        "name": "Express Package",
+        "price": "800",
+        "priceCurrency": "USD",
+        "description": "Continuous in-person support during birth; One prenatal planning call; One postpartum call; On call from 37 weeks. Available to everyone, but ideal if you've given birth before and mainly want support at the birth."
+      },
+      {
+        "@type": "Offer",
+        "name": "Prenatal & Postpartum Package",
+        "price": "550",
+        "priceCurrency": "USD",
+        "description": "Two prenatal visits, including birth preferences planning; Two postpartum visits; Text and phone support for 6 weeks after birth"
       }
     ]
   }
@@ -77,7 +84,7 @@
       "name": "What does support look like before, during, and after the birth?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Before the birth: We meet twice, for about 90 minutes each, usually around 28 to 32 weeks and again at 34 to 36 weeks. At the first visit, we talk through what to expect in labor and birth, comfort and pain relief, interventions, and making decisions, and we start your birth preferences. At the second, we finish your birth preferences and plan for your recovery, feeding, and the first weeks at home. Your support person is part of both visits. During labor and birth: With the Birth Doula Package, I'm on call from 37 weeks. When labor starts, or your induction begins, we stay in touch by phone and decide together when I should join you. Many people want me there once labor is active, but you can ask me to come sooner. For a planned cesarean, I join you before the surgery, and in the operating room when the hospital allows. Once I'm with you, I stay through the birth. However your birth happens, I help you and your support person with comfort and decisions. I stay for 1 to 2 hours after the birth to help you settle in and get started with feeding. If I can't be there, a backup doula will support you. After the birth: Postpartum visits can be at home or virtual. If your package doesn't include birth support, your first postpartum visit can be at the hospital. We talk through your birth, how you're recovering and feeding, and what would help now. You can text or call with questions until 6 weeks after the birth."
+        "text": "Before the birth: We meet twice, for about 90 minutes each, usually around 28 to 32 weeks and again at 34 to 36 weeks. At the first visit, we talk through what to expect in labor and birth, comfort and pain relief, interventions, and making decisions, and we start your birth preferences. At the second, we finish your birth preferences and plan for your recovery, feeding, and the first weeks at home. Your support person is part of both visits. With the Express Package, we cover the essentials in one planning call. During labor and birth: With the Birth Doula or Express Package, I'm on call from 37 weeks. When labor starts, or your induction begins, we stay in touch by phone and decide together when I should join you. Many people want me there once labor is active, but you can ask me to come sooner. For a planned cesarean, I join you before the surgery, and in the operating room when the hospital allows. Once I'm with you, I stay through the birth. However your birth happens, I help you and your support person with comfort and decisions. I stay for 1 to 2 hours after the birth to help you settle in and get started with feeding. If I can't be there, a backup doula will support you. After the birth: Postpartum visits can be at home or virtual; with the Express Package, it's one call. If your package doesn't include birth support, your first postpartum visit can be at the hospital. We talk through your birth, how you're recovering and feeding, and what would help now. You can text or call with questions until 6 weeks after the birth, except with the Express Package."
       }
     },
     {
@@ -132,7 +139,7 @@
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
   <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
-  <script defer src="js/site.js?v=22"></script>
+  <script defer src="js/site.js?v=23"></script>
   <!-- Loads Google Analytics and the Meta Pixel (PageView only) after the page has appeared, so on slow phones the photo and text don't wait on them. The same code is in every page. -->
   <script>
     window.addEventListener('load', function () {
@@ -181,27 +188,38 @@
               <img src="images/flower-buds.jpg" alt="Pink flower buds on a branch" loading="lazy">
               <h2>Birth Doula &amp; Pregnancy Packages</h2>
               <p style="margin-top: 0.5rem"><a class="arrow-link" href="high-risk-pregnancy-doula">Support for high-risk pregnancies</a></p>
-              <p class="package-note"><strong>Neither package fits?</strong>I can create a custom one with more or less support.</p>
+              <p class="package-note"><strong>None of these fit?</strong>I can create a custom one with more or less support.</p>
             </figure>
             <div class="package-list">
               <!-- To change a price or what's included, edit the text below -->
               <div class="card package">
-                <h3>Prenatal &amp; Postpartum Package <span class="price">$550</span></h3>
+                <h3>Birth Doula Package <span class="price">$1,200</span></h3>
                 <ul>
-                  <li>Two individual prenatal visits tailored to your care plan, including birth preferences planning</li>
-                  <li>Two individual postpartum visits</li>
-                  <li>Text and phone support until 6 weeks after birth</li>
+                  <li>Continuous in-person support during birth</li>
+                  <li>Two prenatal visits</li>
+                  <li>One postpartum visit</li>
+                  <li>On call from 37 weeks</li>
+                  <li>Text and phone support for 6 weeks after birth</li>
                 </ul>
               </div>
               <!-- To change a price or what's included, edit the text below -->
               <div class="card package">
-                <h3>Birth Doula Package <span class="price">$1,200</span></h3>
+                <h3>Express Package <span class="price">$800</span></h3>
                 <ul>
-                  <li>Continuous in-person support during active labor and birth</li>
-                  <li>Two individual prenatal visits tailored to your care plan</li>
-                  <li>One individual postpartum visit</li>
-                  <li>On-call availability starting at 37 weeks</li>
-                  <li>Text and phone support until 6 weeks after birth</li>
+                  <li>Continuous in-person support during birth</li>
+                  <li>One prenatal planning call</li>
+                  <li>One postpartum call</li>
+                  <li>On call from 37 weeks</li>
+                </ul>
+                <p class="package-fit">*Available to everyone, but ideal if you've given birth before and mainly want support at the birth.</p>
+              </div>
+              <!-- To change a price or what's included, edit the text below -->
+              <div class="card package">
+                <h3>Prenatal &amp; Postpartum Package <span class="price">$550</span></h3>
+                <ul>
+                  <li>Two prenatal visits, including birth preferences planning</li>
+                  <li>Two postpartum visits</li>
+                  <li>Text and phone support for 6 weeks after birth</li>
                 </ul>
               </div>
             </div>
@@ -242,11 +260,11 @@
         <details>
           <summary>What does support look like before, during, and after the birth?</summary>
           <p class="faq-label">Before the birth</p>
-          <p>We meet twice, for about 90 minutes each, usually around 28 to 32 weeks and again at 34 to 36 weeks. At the first visit, we talk through what to expect in labor and birth, comfort and pain relief, interventions, and making decisions, and we start your birth preferences. At the second, we finish your birth preferences and plan for your recovery, feeding, and the first weeks at home. Your support person is part of both visits.</p>
+          <p>We meet twice, for about 90 minutes each, usually around 28 to 32 weeks and again at 34 to 36 weeks. At the first visit, we talk through what to expect in labor and birth, comfort and pain relief, interventions, and making decisions, and we start your birth preferences. At the second, we finish your birth preferences and plan for your recovery, feeding, and the first weeks at home. Your support person is part of both visits. With the Express Package, we cover the essentials in one planning call.</p>
           <p class="faq-label">During labor and birth</p>
-          <p>With the Birth Doula Package, I'm on call from 37 weeks. When labor starts, or your induction begins, we stay in touch by phone and decide together when I should join you. Many people want me there once labor is active, but you can ask me to come sooner. For a planned cesarean, I join you before the surgery, and in the operating room when the hospital allows. Once I'm with you, I stay through the birth. However your birth happens, I help you and your support person with comfort and decisions. I stay for 1 to 2 hours after the birth to help you settle in and get started with feeding. If I can't be there, a backup doula will support you.</p>
+          <p>With the Birth Doula or Express Package, I'm on call from 37 weeks. When labor starts, or your induction begins, we stay in touch by phone and decide together when I should join you. Many people want me there once labor is active, but you can ask me to come sooner. For a planned cesarean, I join you before the surgery, and in the operating room when the hospital allows. Once I'm with you, I stay through the birth. However your birth happens, I help you and your support person with comfort and decisions. I stay for 1 to 2 hours after the birth to help you settle in and get started with feeding. If I can't be there, a backup doula will support you.</p>
           <p class="faq-label">After the birth</p>
-          <p>Postpartum visits can be at home or virtual. If your package doesn't include birth support, your first postpartum visit can be at the hospital. We talk through your birth, how you're recovering and feeding, and what would help now. You can text or call with questions until 6 weeks after the birth.</p>
+          <p>Postpartum visits can be at home or virtual; with the Express Package, it's one call. If your package doesn't include birth support, your first postpartum visit can be at the hospital. We talk through your birth, how you're recovering and feeding, and what would help now. You can text or call with questions until 6 weeks after the birth, except with the Express Package.</p>
         </details>
         <details>
           <summary>Is a doula still helpful if I'm having an induction, an epidural, or a planned cesarean?</summary>
