@@ -47,7 +47,7 @@ p { margin: 0 0 1em; }
 
 .wrap { width: min(100% - 2.5rem, 70rem); margin-inline: auto; }
 .wrap.narrow { width: min(100% - 2.5rem, 44rem); }
-section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+section { padding: clamp(1.5rem, 2.5vw, 2rem) 0; }
 .sand { background: var(--sand); }
 
 .eyebrow { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta); margin: 0 0 1rem; }
@@ -92,7 +92,7 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 }
 
 /* Home hero */
-.home-hero { padding: clamp(2.5rem, 6vw, 5rem) 0; background: linear-gradient(180deg, var(--sand), var(--paper)); }
+.home-hero { padding: clamp(1.75rem, 3.5vw, 2.75rem) 0 clamp(1.5rem, 2.5vw, 2rem); background: linear-gradient(180deg, var(--sand), var(--paper)); }
 .hero-grid { display: grid; gap: 2.5rem 4rem; align-items: center; }
 @media (min-width: 54rem) { .hero-grid { grid-template-columns: 1.15fr 0.85fr; } }
 .hero-photo { margin: 0; position: relative; max-width: 26rem; justify-self: center; }
@@ -107,10 +107,10 @@ section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
 .creds strong { display: block; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; color: var(--turquoise-dark); }
 
 /* Page hero (all pages except home) */
-.page-hero { background: linear-gradient(180deg, var(--sand), var(--paper)); padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(1.5rem, 3vw, 2.5rem); }
+.page-hero { background: linear-gradient(180deg, var(--sand), var(--paper)); padding: clamp(2rem, 4.5vw, 3.5rem) 0 0; }
 .page-hero h1 { margin-bottom: 0.3em; }
 .page-hero .lead { max-width: 44rem; margin-bottom: 0; }
-.page-hero + section { padding-top: clamp(2rem, 4vw, 3rem); }
+.page-hero + section { padding-top: 1.5rem; }
 
 /* Two-column layouts */
 .two-col { display: grid; gap: 2rem 4rem; align-items: start; }
@@ -126,7 +126,7 @@ picture { display: block; }
 .pull { font-family: var(--serif); font-size: 1.6rem; line-height: 1.3; font-style: italic; color: var(--turquoise-dark); border-left: 2px solid var(--terracotta); padding-left: 1.25rem; margin: 1.5rem 0; }
 
 /* Cards */
-.cards { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); margin-top: 2rem; }
+.cards { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); margin-top: 1.25rem; }
 .card { background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.75rem; box-shadow: var(--shadow); display: flex; flex-direction: column; }
 .card > :last-child { margin-bottom: 0; }
 .card .arrow-link { margin-top: auto; padding-top: 0.5rem; }
@@ -144,7 +144,7 @@ li::marker { color: var(--terracotta); }
 
 /* Services */
 .package-group { display: grid; gap: 2rem 3.5rem; align-items: start; }
-.package-group + .package-group { margin-top: clamp(3rem, 6vw, 4.5rem); }
+.package-group + .package-group { margin-top: clamp(2rem, 4vw, 2.75rem); }
 /* Package photo stays beside the packages on mid-size screens, like the NICU page photos; stacks on phones */
 @media (min-width: 40rem) { .package-group { grid-template-columns: minmax(13rem, 0.8fr) 1.2fr; gap: 2rem 2.25rem; } }
 @media (min-width: 54rem) { .package-group { grid-template-columns: 0.9fr 1.1fr; gap: 2rem 3.5rem; } }
@@ -171,14 +171,14 @@ li::marker { color: var(--terracotta); }
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 1.5rem 0 0; }
 .chips a { display: block; padding: 0.4rem 0.95rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); font-size: 0.95rem; font-weight: 500; text-decoration: none; }
 .chips a:hover { border-color: var(--turquoise); color: var(--turquoise); }
-.resource-group + .resource-group { margin-top: 3.5rem; }
+.resource-group + .resource-group { margin-top: 3rem; }
 /* Every other category sits on a full-width sand band, so the long page isn't one flat column */
-.resource-group:nth-of-type(even) { background: var(--sand); box-shadow: 0 0 0 100vmax var(--sand); clip-path: inset(-3rem -100vmax); padding-block: 0.5rem; }
-.resource-group:nth-of-type(even) + .resource-group, .resource-group + .resource-group:nth-of-type(even) { margin-top: 6rem; }
+.resource-group:nth-of-type(even) { background: var(--sand); box-shadow: 0 0 0 100vmax var(--sand); clip-path: inset(-1.5rem -100vmax); padding-block: 0.5rem; }
+.resource-group:nth-of-type(even) + .resource-group, .resource-group + .resource-group:nth-of-type(even) { margin-top: 3rem; }
 .resource-group .cards { margin-top: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
 .resource h3 { font-size: 1.4rem; }
 .resource .meta { font-size: 0.95rem; color: var(--muted); margin-top: auto; padding-top: 0.5rem; }
-.fine-print { font-size: 0.95rem; color: var(--muted); margin-top: 3rem; }
+.fine-print { font-size: 0.95rem; color: var(--muted); margin-top: 2rem; }
 
 /* Research */
 .article-list { list-style: none; padding: 0; }
@@ -194,8 +194,8 @@ li::marker { color: var(--terracotta); }
 .article { padding-top: 2rem; }
 .article .cover { width: 100%; border-radius: var(--radius); margin-bottom: 2.5rem; box-shadow: var(--shadow); }
 .article p { font-size: 1.125rem; line-height: 1.75; }
-.article h2 { font-size: 1.9rem; margin-top: 1.75em; }
-.article-footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+.article h2 { font-size: 1.9rem; margin-top: 1.2em; }
+.article-footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
 
 /* Contact */
 .contact-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
@@ -239,7 +239,7 @@ li::marker { color: var(--terracotta); }
 .copyright { border-top: 1px solid rgba(255, 255, 255, 0.15); margin-top: 2.5rem; padding-top: 1.25rem; font-size: 0.9rem; color: #9fb9b6; }
 
 /* Article author box */
-.author-box { margin-top: 3rem; }
+.author-box { margin-top: 2rem; }
 .author-box p { font-size: 1rem; line-height: 1.6; }
 
 /* Home heading is longer than other page titles, so it is set a little smaller */
@@ -286,10 +286,10 @@ li::marker { color: var(--terracotta); }
 .chips.static { margin-top: 0.75rem; }
 
 /* Long-form service pages: one flowing column with a contact card alongside */
-.flow-layout { display: grid; gap: 3rem 5rem; align-items: start; }
+.flow-layout { display: grid; gap: 1.5rem 5rem; align-items: start; }
 @media (min-width: 60rem) { .flow-layout { grid-template-columns: minmax(0, 1fr) 21rem; } }
 .flow { max-width: 42rem; }
-.flow h2 { margin-top: 2.25em; font-size: clamp(1.8rem, 3vw, 2.2rem); }
+.flow h2 { margin-top: 1.1em; font-size: clamp(1.8rem, 3vw, 2.2rem); }
 .flow h2:first-child { margin-top: 0; }
 
 .aside-card { gap: 0; }
@@ -307,7 +307,7 @@ li::marker { color: var(--terracotta); }
 .icon-list .icon { margin: 0; }
 .icon-list strong { color: var(--turquoise-dark); }
 
-.story-quote { margin: 3.5rem 0 0; padding: 2rem 2.25rem; background: var(--sand); border-radius: var(--radius); }
+.story-quote { margin: 1.5rem 0 0; padding: 2rem 2.25rem; background: var(--sand); border-radius: var(--radius); }
 .story-quote blockquote { margin: 0; font-family: var(--serif); font-size: 1.6rem; line-height: 1.35; font-style: italic; color: var(--turquoise-dark); }
 .story-quote figcaption { display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; font-size: 0.98rem; line-height: 1.4; }
 .story-quote img { width: 3.5rem; height: 3.5rem; border-radius: 50%; object-fit: cover; }
@@ -360,7 +360,7 @@ li::marker { color: var(--terracotta); }
 .closing .lead { color: inherit; }
 
 /* Reduced-fee statement under the packages */
-.fee-note { max-width: 44rem; margin: 3.5rem 0 0; padding-left: 1.25rem; border-left: 2px solid var(--terracotta); font-size: 1.15rem; }
+.fee-note { max-width: 44rem; margin: 1.5rem 0 0; padding-left: 1.25rem; border-left: 2px solid var(--terracotta); font-size: 1.15rem; }
 
 /* ---- Personal-practice pass: Garamond for reading, sans-serif only for small interface text ---- */
 body { font-family: var(--serif); font-size: 1.3rem; line-height: 1.55; }
@@ -434,13 +434,13 @@ h1.kicker, .home-hero h1.kicker { font-family: var(--sans); font-size: 0.85rem; 
 .nav-bar { font-family: var(--serif); padding: 0.75rem 0; }
 .nav-bar ul { gap: 0.25rem 2rem; }
 .nav-bar ul a { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; }
-.brand img { height: 4.5rem; }
+.brand img { height: 5.5rem; }
 .site-footer { font-size: 1.2rem; }
 html { scroll-padding-top: 7.5rem; }
 @media (min-width: 50rem) { .sticky { top: 8rem; } }
 @media (min-width: 60rem) { .aside-card { top: 8rem; } }
 @media (max-width: 52rem) {
-  .brand img { height: 3.1rem; }
+  .brand img { height: 3.75rem; }
   .nav-bar ul { gap: 0.1rem 1.4rem; }
   .nav-bar ul a { font-size: 1.3rem; }
 }
@@ -532,3 +532,42 @@ h3, .package h3, .resource h3, .article-card h3, .offers h3, .do-dont h3, .faq s
 .paper-list .source { margin: 0.25rem 0 0; font-size: 1.05rem; color: var(--ink); }
 #my-research h3 { margin: 2.25rem 0 0; font-size: 1.5rem; }
 #my-research h3 + .paper-list { margin-top: 1rem; padding-left: 1.25rem; }
+
+/* ---- Type scale (2026-10-28) ----
+   A small, fixed set of sizes so the page is easy to follow. Later rules win, so this
+   block overrides the older size rules above.
+     label  0.9rem   uppercase kickers and footer headings
+     small  1.05rem  footer, notes, captions, listing details, fine print
+     body   1.25rem  all reading text, including intro paragraphs, cards, FAQ answers, forms
+     nav    1.35rem  menu links and the Contact button (a step above body)
+     h3     1.5rem   card titles, FAQ questions, prices, quotes, small headings
+     h2     clamp(1.8rem, 3vw, 2.2rem) */
+body, .lead, .page-hero .lead, .closing .lead, .card, .card ul, .package li, .faq details p,
+.fee-note, .article p, .pull + p, .package-note, .inquiry-form label, .inquiry-form legend,
+.inquiry-form .choice, .inquiry-form input, .inquiry-form textarea, .price-list li,
+.button, .inquiry-form .button, .button.small, .article-card p, .author-box p,
+.faq details p.faq-label { font-size: 1.25rem; line-height: 1.55; }
+.faq details p.faq-label { line-height: 1.3; }
+.site-footer, .site-footer p, .site-footer li, .copyright, .note, .fine-print, .resource .meta,
+.aside-card .phone, .story-quote figcaption, .hero-photo figcaption, .package .package-fit,
+.byline, .study .source, .paper-list .source, .chips a, .chips.static li, .inquiry-form .note,
+.creds li { font-size: 1.05rem; line-height: 1.5; }
+h1.kicker, .home-hero h1.kicker, .eyebrow, .article .eyebrow, .author-box .eyebrow,
+.site-footer h2, .contact-list span { font-size: 0.9rem; }
+.nav-bar ul a, .nav-bar a.button.header-contact, .button.small.header-contact { font-size: 1.35rem; }
+@media (max-width: 52rem) { .nav-bar ul a, .nav-bar a.button.header-contact { font-size: 1.35rem; } }
+h3, .resource h3, .article-card h3, .faq summary, .price, .package .price, .price-list .price,
+.contact-list a, .package-note strong, .paper-list a, .paper-list .paper-title, .study h2,
+.side-heading, .site-footer .name, .creds strong, .steps h3, .do-dont h3, .link-list a,
+#my-research h3, .pull, .story-quote blockquote { font-size: 1.5rem; }
+h2, .flow h2, .aside-card h2, .icon-cards .card h2, .resource-group h2, .article h2,
+.inquiry-form h2, .package-group .photo h2, .package-group h2 { font-size: clamp(1.8rem, 3vw, 2.2rem); }
+@media (min-width: 40rem) { .study h2 { font-size: 1.5rem; } }
+/* Package cards and the credentials list keep their tighter line spacing */
+.package li, .package .package-fit, .cred-list li { line-height: 1.35; }
+/* Headings inside cards and in the single-column page body (NICU and high-risk pages)
+   all use the small-heading size, so headings on those pages sit at one level */
+.card h2, .card h3, .feature-card h2, .feature-card h3, .aside-card h2, .flow h2 { font-size: 1.5rem; line-height: 1.2; }
+
+/* Keyboard focus: a clear ring on every link, button, and form control */
+a:focus-visible, button:focus-visible, summary:focus-visible, .button:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; border-radius: 2px; }
