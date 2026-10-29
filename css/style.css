@@ -400,6 +400,9 @@ h1.kicker, .home-hero h1.kicker { font-family: var(--sans); font-size: 0.85rem; 
    short stand-alone statements centred under the birds. */
 .lead, .card, .card ul, .package li, .faq details p, .fee-note, .article p, .pull + p { font-size: 1.3rem; line-height: 1.55; }
 .page-hero .lead, .closing .lead { font-size: 1.5rem; line-height: 1.45; }
+.cred-list { margin: 0; padding-left: 1.15rem; }
+.cred-list li { margin-bottom: 0.3rem; line-height: 1.35; }
+.cred-list li > ul { margin: 0.3rem 0 0; }
 /* Package cards are lists of short items, so they use tighter spacing */
 .package li { line-height: 1.35; margin-bottom: 0.3rem; }
 .package .package-fit { line-height: 1.35; }

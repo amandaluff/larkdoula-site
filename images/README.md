@@ -9,9 +9,9 @@ Put these files in this folder, with exactly these names:
 | `favicon.png` | Browser tab, menu bar | Small square bird mark |
 | `amanda-portrait.jpg` | Home | Close-up outdoor portrait (phone-size copies: `amanda-portrait-480.jpg`, `-480.webp`, `-900.webp`) |
 | `amanda-seated.jpg` | Home (Meet Amanda) | Seated outdoor portrait (phone-size copies: `amanda-seated-480.jpg`, `-480.webp`, `-721.webp`) |
-| `amanda-conference.jpg` | Home (Meet Amanda) | Presenting at a conference |
-| `amanda-cake.jpg`, `amanda-domes.jpg` | Home (Meet Amanda, "Outside of work") | Two personal photos |
-| `birds.png` | Home, Services, NICU and high-risk pages (closing bands), Meet Amanda (above "Why Lark Doula?") | The two birds from the logo, transparent background |
+| `amanda-conference.jpg` | Not used since 2026-10-28 (home page condensed) | Presenting at a conference |
+| `amanda-cake.jpg`, `amanda-domes.jpg` | Not used since 2026-10-28 (home page condensed) | Two personal photos |
+| `birds.png` | Services, NICU and high-risk pages (closing bands) | The two birds from the logo, transparent background |
 | `flower-buds.jpg` | Services (Pregnancy & Birth) | Pink flower buds |
 | `lake-sunrise.jpg` | Services (NICU Support) | Sunrise over Lake Michigan |
 | `nicu-hand-and-feet.jpg` | NICU page (top) | Amanda's hand cradling Melody's feet in the NICU (no face; a supply packet was edited out) |
