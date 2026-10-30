@@ -47,21 +47,4 @@ python3 preview.py
 
 Then open http://localhost:8000.
 
-## Publishing on GitHub Pages
-
-1. Create a free GitHub account and a new **public** repository named `larkdoula-site`.
-2. On the empty repository page, click **uploading an existing file**, drag in everything inside this folder, and click **Commit changes**.
-3. In the repository: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, choose `main` and `/ (root)`, and save.
-4. After a minute or two the site is live at `https://YOUR-USERNAME.github.io/larkdoula-site/`. Check it there before touching the domain.
-
-## Connecting www.larkdoula.com
-
-Keep the Google Site published until the last step, so the site is never down.
-
-1. In the repository: **Settings → Pages → Custom domain**, enter `www.larkdoula.com` and save. (GitHub adds a file named `CNAME` to the repository.)
-2. At your domain registrar, change the DNS records:
-   - `www` **CNAME** → `YOUR-USERNAME.github.io`
-   - `@` (the bare domain) **A** records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - Remove the old records that point to Google Sites.
-3. Once GitHub shows the DNS check passed, tick **Enforce HTTPS**.
-4. In Google Search Console, submit `https://www.larkdoula.com/sitemap.xml`.
+GitHub Pages serves `main` at www.larkdoula.com (custom domain set in the repository's Pages settings; `CNAME` holds it). Anything merged to `main` is live within a few minutes.
