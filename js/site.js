@@ -49,6 +49,7 @@
       servicesError.hidden = picked;
       if (!picked) {
         document.getElementById('f-services').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        form.querySelector('input[name="Services"]').focus({ preventScroll: true });
         return;
       }
 
