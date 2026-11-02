@@ -52,6 +52,8 @@
   <!-- Loads Google Analytics and the Meta Pixel (PageView only) after the page has appeared, so on slow phones the photo and text don't wait on them. The same code is in every page. -->
   <script>
     window.addEventListener('load', function () {
+      // Automated browsers (crawlers, ad checkers, speed tests) don't load either script, so they aren't counted.
+      if (navigator.webdriver || /HeadlessChrome|Lighthouse|bot|crawl|spider/i.test(navigator.userAgent)) return;
       var ga = document.createElement('script');
       ga.async = true;
       ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-CBC3Q89SKQ';
