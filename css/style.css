@@ -391,6 +391,15 @@ h1.kicker, .home-hero h1.kicker { font-family: var(--sans); font-size: 0.85rem; 
   .home-hero .hero-grid > div > .kicker, .home-hero .hero-grid > div > .display { order: 1; }
   .home-hero .hero-photo { order: 2; max-width: 15rem; justify-self: start; margin: 0.5rem 0 2.25rem; }
 }
+/* Phones: a smaller photo sits beside the greeting, so the intro starts on the first screen */
+@media (max-width: 39.99rem) {
+  .home-hero .hero-grid { grid-template-columns: 1fr 7.5rem; column-gap: 1.5rem; }
+  .home-hero .hero-grid > div > * { grid-column: 1 / -1; }
+  .home-hero .hero-grid > div > .display { grid-column: 1; align-self: center; margin: 0 0 1.5rem; font-size: 2.05rem; }
+  .home-hero .hero-photo { grid-column: 2; max-width: none; width: 100%; margin: 0 0 2.25rem; }
+  .home-hero .hero-photo::before { inset: 0.75rem -0.75rem -0.75rem 0.75rem; }
+  .home-hero .hero-photo figcaption { display: none; }
+}
 
 /* Two personal photos at the end of Meet Amanda */
 .snapshots { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: start; }
