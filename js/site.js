@@ -2,8 +2,10 @@
    Events sent:
      phone_click          someone taps the Lark Doula phone number
      email_click          someone taps the Lark Doula email address
-     call_button_click    someone clicks a "Schedule a Free 30-Minute Call" style button
-     inquiry_form_submit  the inquiry form on the Contact page is sent successfully
+     call_button_click    someone clicks a Reach Out button (goes to the Contact page)
+     booking_click        someone clicks a Book a Free Call button (goes to the booking calendar on the
+                          Contact page) or the link to the Google booking page
+     inquiry_form_submit  the message form on the Contact page is sent successfully
    Each click event also says where the link was: header, footer, or page. */
 (function () {
   var PHONE = 'tel:+14142853445';
@@ -26,6 +28,8 @@
       send('email_click', { link_location: where(a) });
     } else if (a.classList.contains('button') && /(^|\/)contact$/.test(href)) {
       send('call_button_click', { link_location: where(a) });
+    } else if (/(^|\/)contact#book$/.test(href) || /^https:\/\/calendar\.app\.google\//.test(href)) {
+      send('booking_click', { link_location: where(a) });
     }
   });
 
@@ -39,14 +43,15 @@
     var button = form.querySelector('button[type="submit"]');
     var subject = form.querySelector('input[name="_subject"]');
     var baseSubject = subject.value;
+    var buttonText = button.textContent;
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       formError.hidden = true;
 
-      // "Which services" is required: at least one box must be ticked
-      var picked = form.querySelectorAll('input[name="Services"]:checked').length > 0;
-      servicesError.hidden = picked;
+      // "Which services" is required when the form has it: at least one box must be ticked
+      var picked = !servicesError || form.querySelectorAll('input[name="Services"]:checked').length > 0;
+      if (servicesError) servicesError.hidden = picked;
       if (!picked) {
         document.getElementById('f-services').scrollIntoView({ behavior: 'smooth', block: 'center' });
         form.querySelector('input[name="Services"]').focus({ preventScroll: true });
@@ -71,7 +76,7 @@
         .catch(function () {
           formError.hidden = false;
           button.disabled = false;
-          button.textContent = 'Send Inquiry';
+          button.textContent = buttonText;
         });
     });
   }

@@ -6,14 +6,14 @@
 
   <!-- SEO: the title and description are what Google shows in search results -->
   <title>Contact Lark Doula | Milwaukee Doula Inquiry</title>
-  <meta name="description" content="Start a free, no-obligation conversation with Amanda at Lark Doula about birth, pregnancy, or NICU support in Milwaukee. Email, call, text, or use the form.">
+  <meta name="description" content="Book a free, no-commitment conversation with Amanda at Lark Doula about birth, pregnancy, or NICU support in Milwaukee, or send a message, call, or text.">
   <link rel="canonical" href="https://www.larkdoula.com/contact">
 
   <!-- Preview shown when the page is shared on social media or by text -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lark Doula">
   <meta property="og:title" content="Contact Lark Doula | Milwaukee Doula Inquiry">
-  <meta property="og:description" content="Start a free, no-obligation conversation with Amanda at Lark Doula about birth, pregnancy, or NICU support in Milwaukee. Email, call, text, or use the form.">
+  <meta property="og:description" content="Book a free, no-commitment conversation with Amanda at Lark Doula about birth, pregnancy, or NICU support in Milwaukee, or send a message, call, or text.">
   <meta property="og:url" content="https://www.larkdoula.com/contact">
   <meta property="og:image" content="https://www.larkdoula.com/images/social-card.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"></noscript>
   <!-- The ?v= number makes browsers fetch the newest stylesheet. Raise it whenever css/style.css changes. -->
-  <link rel="stylesheet" href="css/style.css?v=39">
+  <link rel="stylesheet" href="css/style.css?v=41">
 
   <!-- Structured data: tells search engines what this page is about -->
   <script type="application/ld+json">
@@ -48,7 +48,7 @@
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
   <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
-  <script defer src="js/site.js?v=38"></script>
+  <script defer src="js/site.js?v=41"></script>
   <!-- Loads Google Analytics and the Meta Pixel (PageView only) after the page has appeared, so on slow phones the photo and text don't wait on them. The same code is in every page. -->
   <script>
     window.addEventListener('load', function () {
@@ -87,23 +87,33 @@
     <section class="page-hero">
       <div class="wrap">
         <h1>Contact Me</h1>
-        <p class="lead">The best way to reach me is to fill out the form on this page. I'll reply within one business day to set up a free, no-commitment conversation. You don't need to know exactly what kind of support you want yet, and we'll figure that out together.</p>
+        <p class="lead">The best way to get started is a free, no-commitment conversation, and you can book a time below. I'll send you a Google Meet link, or I can call you if you prefer. It's okay if you don't know what kind of support you want yet. We'll figure that out together.</p>
       </div>
     </section>
 
-    <section>
-      <div class="wrap two-col">
-        <div class="sticky">
+    <!-- Booking calendar (left) and other ways to reach Amanda (right); they stack on phones.
+         The calendar is the Google Calendar appointment schedule "30 min with Amanda" in amanda@larkdoula.com.
+         The Book a Free Call buttons on other pages link here (contact#book). -->
+    <section id="book" class="booking">
+      <div class="wrap booking-grid">
+        <div>
+          <div class="card booking-embed">
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2OaSCQHxh2TU6yu0lUP0jdyCdUWDNaiZwdpNqOthcBjXm97Gwj7nwNlBv4eOGzhhrtzq8N-MdL?gv=true" title="Book a free call with Amanda" loading="lazy"></iframe>
+          </div>
+          <p class="note">If the calendar doesn't load, you can <a href="https://calendar.app.google/BtSorg71bUWS3Kee7">open the booking page in a new window</a>.</p>
+        </div>
+        <div>
           <h2 class="side-heading">You can also email, call, or text</h2>
           <ul class="contact-list">
             <li><span>Email</span><a href="mailto:amanda@larkdoula.com">amanda@larkdoula.com</a></li>
             <li><span>Call or text</span><a href="tel:+14142853445" aria-label="Call or text Amanda at (414) 285-3445">(414) 285-3445</a></li>
           </ul>
-        </div>
-        <div>
-          <!-- Inquiry form. Each submission is emailed to you by the form service (formspree.io).
-               To change a question, edit its label below. Keep each field's name="..." unique. -->
-          <form class="card inquiry-form" id="inquiry-form" action="https://formspree.io/f/mnpjdeld" method="POST" aria-label="Inquiry form">
+
+          <!-- Message form, for people not ready to book a call. Each message is emailed to you
+               by the form service (formspree.io). Keep each field's name="..." unique. -->
+          <h2 class="side-heading">Send me a message</h2>
+          <p>If you have a question first, or you'd rather I reach out to you, send me a message and I'll reply within one business day.</p>
+          <form class="card inquiry-form" id="inquiry-form" action="https://formspree.io/f/mnpjdeld" method="POST" aria-label="Message form">
             <p class="note"><span class="req">*</span> Required</p>
 
             <label for="f-name">First and last name <span class="req">*</span></label>
@@ -115,47 +125,17 @@
             <label for="f-phone">Phone number <span class="hint">(needed if you'd like a call or text)</span></label>
             <input id="f-phone" type="tel" name="Phone" autocomplete="tel">
 
-            <fieldset>
-              <legend>How would you prefer to be contacted?</legend>
-              <label class="choice"><input type="checkbox" name="Preferred contact" value="Phone Call"> Phone Call</label>
-              <label class="choice"><input type="checkbox" name="Preferred contact" value="Text Message"> Text Message</label>
-              <label class="choice"><input type="checkbox" name="Preferred contact" value="Email"> Email</label>
-            </fieldset>
-
-            <fieldset id="f-services">
-              <legend>Which services are you interested in? <span class="req">*</span></legend>
-              <label class="choice"><input type="checkbox" name="Services" value="Birth Doula Support"> Birth Doula Support</label>
-              <label class="choice"><input type="checkbox" name="Services" value="Prenatal &amp; Postpartum Support"> Prenatal &amp; Postpartum Support</label>
-              <label class="choice"><input type="checkbox" name="Services" value="NICU Support"> NICU Support</label>
-              <label class="choice"><input type="checkbox" name="Services" value="Not sure yet"> Not sure yet</label>
-              <label class="choice"><input type="checkbox" name="Services" value="Other"> Other: <input type="text" name="Services (other)" aria-label="Other service"></label>
-              <p class="field-error" id="f-services-error" role="alert" hidden>Please choose at least one option.</p>
-            </fieldset>
-
-            <label for="f-date">Due date or baby's birth date <span class="hint">(if applicable)</span></label>
-            <input id="f-date" type="text" name="Due date or birth date">
-
-            <label for="f-details">Anything you'd like me to know? <span class="hint">(optional)</span></label>
-            <textarea id="f-details" name="Details" rows="4"></textarea>
-
-            <fieldset>
-              <legend>How did you hear about Lark Doula?</legend>
-              <label class="choice"><input type="radio" name="How did you hear about us" value="Instagram"> Instagram</label>
-              <label class="choice"><input type="radio" name="How did you hear about us" value="Facebook"> Facebook</label>
-              <label class="choice"><input type="radio" name="How did you hear about us" value="Google Search"> Google Search</label>
-              <label class="choice"><input type="radio" name="How did you hear about us" value="Word of Mouth / Friend"> Word of Mouth / Friend</label>
-              <label class="choice"><input type="radio" name="How did you hear about us" value="Healthcare Provider Referral"> Healthcare Provider Referral</label>
-              <label class="choice"><input type="radio" name="How did you hear about us" value="Other"> Other: <input type="text" name="How did you hear (other)" aria-label="Other way you heard about Lark Doula"></label>
-            </fieldset>
+            <label for="f-details">Your message <span class="req">*</span></label>
+            <textarea id="f-details" name="Message" rows="5" required></textarea>
 
             <!-- Hidden fields: the email subject line (the sender's name is added automatically),
                  and a trap that catches spam robots -->
             <input type="hidden" name="_subject" value="Doula Inquiry Form Submission">
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="trap" aria-hidden="true">
 
-            <button class="button" type="submit">Send Inquiry</button>
+            <button class="button" type="submit">Send Message</button>
             <p class="note" style="margin: 1rem 0 0">Your information is kept confidential. See the <a href="privacy">privacy notice</a>.</p>
-            <p class="field-error" id="f-form-error" role="alert" hidden>Sorry, something went wrong and your inquiry was not sent. Please email <a href="mailto:amanda@larkdoula.com">amanda@larkdoula.com</a> or call/text <a href="tel:+14142853445" aria-label="Call or text Amanda at (414) 285-3445">(414) 285-3445</a>.</p>
+            <p class="field-error" id="f-form-error" role="alert" hidden>Sorry, something went wrong and your message was not sent. Please email <a href="mailto:amanda@larkdoula.com">amanda@larkdoula.com</a> or call/text <a href="tel:+14142853445" aria-label="Call or text Amanda at (414) 285-3445">(414) 285-3445</a>.</p>
           </form>
 
           <!-- Shown in place of the form once an inquiry has been sent -->

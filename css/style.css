@@ -220,6 +220,14 @@ li::marker { color: var(--accent); }
 .inquiry-form .choice input[type="text"] { flex: 1 1 10rem; width: auto; padding: 0.4rem 0.6rem; }
 .inquiry-form textarea { resize: vertical; display: block; }
 .inquiry-form > .note:first-child { margin: 0; }
+/* Booking calendar on the Contact page (Google Calendar embed) */
+.booking-grid { display: grid; gap: 2rem; align-items: start; }
+/* The calendar stays narrow (under about 600px) so Google shows the month on top and the times below it */
+.booking-grid > :first-child { max-width: 30rem; }
+@media (min-width: 54rem) { .booking-grid { grid-template-columns: 30rem minmax(0, 1fr); gap: 2rem 3rem; } }
+.booking-embed { padding: 0; overflow: hidden; }
+.booking-embed iframe { display: block; width: 100%; height: 90rem; border: 0; }  /* tall enough for a full weekday of times without scrolling inside the box */
+.booking .note { margin: 0.75rem 0 0; }
 .inquiry-form button { margin-top: 1.75rem; cursor: pointer; }
 .inquiry-form button:disabled { opacity: 0.6; cursor: default; }
 .req { color: var(--turquoise); }
