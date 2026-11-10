@@ -11,12 +11,12 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 | `nicu-doula.html` | NICU doula page (`/nicu-doula`) |
 | `high-risk-pregnancy-doula.html` | High-risk pregnancy page (`/high-risk-pregnancy-doula`) |
 | `resources.html` | Community Resource Guide (`/resources`) |
-| `contact.html` | Contact (`/contact`) |
+| `contact.html` | Contact (`/contact`): the booking calendar (a Google Calendar appointment schedule embedded at `#book`), email and phone, and the message form |
 | `studies.html` | Studies from My Posts (`/studies`): the studies cited in Instagram and Facebook posts, linked from the Instagram bio. Not in the menu or footer. Newest first; each entry has the post's first image (400 px square, `images/study-*.jpg`) |
 | `research/index.html` | Doula, PhD research library (`/research`) |
 | `research/waterbirth.html`, `research/doula-evidence.html` | Articles |
 | `privacy.html` | Privacy notice (`/privacy`), linked from the footer |
-| `js/site.js` | Sends phone, email, call-button and form events to Google Analytics |
+| `js/site.js` | Sends phone, email, Reach Out, Book a Free Call, and message-form events to Google Analytics |
 | `css/style.css` | All colors, fonts and layout. The palette is the list of variables at the top. |
 | `images/` | Photos and logo (see `images/README.md`) |
 | `home.html` | Sends the old Google Sites address `/home` to the home page |
