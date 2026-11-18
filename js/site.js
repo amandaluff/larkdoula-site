@@ -81,3 +81,29 @@
     });
   }
 })();
+
+/* Opens a closed FAQ answer when a link points inside it, such as the
+   "prenatal visits" links on the Services package cards, then scrolls to it.
+   Also works when the page is opened with that address (services#prenatal-visits). */
+(function () {
+  function openTarget(hash) {
+    if (!hash || hash.length < 2) return false;
+    var el = document.getElementById(hash.slice(1));
+    if (!el) return false;
+    var box = el.closest('details');
+    if (!box) return false;
+    box.open = true;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return true;
+  }
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var hash = link.getAttribute('href');
+    if (openTarget(hash)) {
+      e.preventDefault();
+      history.pushState(null, '', hash);
+    }
+  });
+  if (location.hash) openTarget(location.hash);
+})();
