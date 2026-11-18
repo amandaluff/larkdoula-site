@@ -602,3 +602,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .button:focus-visi
 /* Lists inside FAQ answers (the "Before the birth" topics on Services) */
 .faq details ul { margin: 0 0 1.25rem; padding-left: 1.25rem; max-width: 40rem; }
 .faq details li { font-size: 1.25rem; line-height: 1.55; }
+
+/* Pages where the contact card should come right after the intro on phones
+   (pregnancy loss and abortion support page). On computers it sits beside the text as usual. */
+.split-aside > .aside-card { max-width: 42rem; } /* same width as the text when it sits between paragraphs */
+@media (min-width: 60rem) {
+  .split-aside > .flow:first-child { grid-column: 1; grid-row: 1; }
+  .split-aside > .aside-card { grid-column: 2; grid-row: 1 / span 2; }
+  .split-aside > .flow:last-child { grid-column: 1; grid-row: 2; }
+}
