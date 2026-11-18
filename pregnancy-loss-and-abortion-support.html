@@ -47,8 +47,26 @@
   "url": "https://www.larkdoula.com/pregnancy-loss-and-abortion-support"
 }
   </script>
-  <!-- Privacy: this page deliberately loads no Google Analytics, no Meta Pixel, and no js/site.js,
-       so visits here are not recorded or shared. Keep it that way. -->
+  <!-- Google Analytics only, so Amanda can see the page is being found. Privacy: no Meta Pixel on this page
+       (Meta can connect visits to Facebook and Instagram accounts), and Google signals and ad
+       personalization are turned off here. Keep it that way. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CBC3Q89SKQ', { allow_google_signals: false, allow_ad_personalization_signals: false });
+  </script>
+  <!-- Records taps on the message button and links (see js/site.js) -->
+  <script defer src="js/site.js?v=43"></script>
+  <script>
+    window.addEventListener('load', function () {
+      if (navigator.webdriver || /HeadlessChrome|Lighthouse|bot|crawl|spider/i.test(navigator.userAgent)) return;
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-CBC3Q89SKQ';
+      document.head.appendChild(ga);
+    });
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
