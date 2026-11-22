@@ -1,4 +1,4 @@
-/* Lark Doula — site styles
+/* Lark Doula - site styles
    Garamond headings to match the logo, a clean sans-serif for reading,
    white and pale teal with deep turquoise and a little marigold.
    To retune the palette, change the variables below. */
@@ -83,7 +83,7 @@ section { padding: clamp(1.5rem, 2.5vw, 2rem) 0; }
 .nav-bar ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; margin: 0; padding: 0; }
 .nav-bar ul a { display: inline-block; font-size: 1rem; font-weight: 500; color: var(--ink); text-decoration: none; padding: 0.35rem 0; border-bottom: 2px solid transparent; }
 .nav-bar ul a:hover { color: var(--turquoise); }
-.nav-bar ul a[aria-current="page"] { color: var(--turquoise); border-bottom-color: var(--accent); }
+.nav-bar ul a[aria-current] { color: var(--turquoise); border-bottom-color: var(--accent); }
 @media (max-width: 52rem) {
   .site-header { position: static; }
   .nav-bar { gap: 0.25rem 0.5rem; }
@@ -151,7 +151,7 @@ li::marker { color: var(--accent); }
 @media (min-width: 40rem) { .package-group { grid-template-columns: minmax(13rem, 0.8fr) 1.2fr; gap: 2rem 2.25rem; } }
 @media (min-width: 54rem) { .package-group { grid-template-columns: 0.9fr 1.1fr; gap: 2rem 3.5rem; } }
 .package-group .photo img { aspect-ratio: 4 / 3; object-fit: cover; }
-.package-group .photo h2 { margin: 1.25rem 0 0; }
+.package-group .photo h2, .package-group .photo .group-title { margin: 1.25rem 0 0; }
 .package-note { max-width: 22rem; margin: 1.5rem 0 0; padding-left: 1rem; border-left: 2px solid var(--accent); font-size: 1.25rem; line-height: 1.5; }
 .package-note strong { display: block; margin-bottom: 0.25rem; font-family: var(--serif); font-weight: 500; font-size: 1.45rem; color: var(--turquoise-dark); }
 .package-list { display: grid; gap: 1.25rem; }
@@ -165,7 +165,7 @@ li::marker { color: var(--accent); }
 .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; font-family: var(--serif); font-size: 1.4rem; line-height: 1.25; color: var(--turquoise-dark); }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; font-family: var(--sans); font-weight: 400; color: var(--turquoise); }
-.faq details[open] summary::after { content: "\2212"; }
+.faq details[open] summary::after { content: "-"; transform: scaleX(1.6); }  /* a plain hyphen, widened to match the + */
 .faq details p { margin: 0 0 1.25rem; max-width: 40rem; }
 .faq details p.faq-label { margin: 0 0 0.35rem; font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--turquoise-dark); }
 
@@ -356,7 +356,7 @@ li::marker { color: var(--accent); }
   .package-group { gap: 0; }
   .package-group .photo { display: contents; }
   .package-group .photo img { order: 1; max-width: none; aspect-ratio: 16 / 9; }
-  .package-group .photo h2 { order: 2; margin: 1.25rem 0 1.25rem; }
+  .package-group .photo h2, .package-group .photo .group-title { order: 2; margin: 1.25rem 0 1.25rem; }
   .package-group .package-list { order: 3; }
   .package-group .photo > p { order: 4; margin-top: 1.25rem !important; }
   .package-group .photo > .package-note { order: 5; }
@@ -467,9 +467,9 @@ html { scroll-padding-top: 7.5rem; }
 /* =====================================================================
    ONE TYPE SYSTEM (this block overrides everything above it)
    Typeface: Garamond everywhere, including buttons and labels.
-   Sizes:    reading text 1.3rem · intro under a page title 1.5rem ·
-             small headings 1.5rem · section headings 1.9rem+ ·
-             capital-letter labels 1rem · footer 1.15rem
+   Sizes:    reading text 1.3rem, intro under a page title 1.5rem,
+             small headings 1.5rem, section headings 1.9rem+,
+             capital-letter labels 1rem, footer 1.15rem
    ===================================================================== */
 :root { --sans: "EB Garamond", Garamond, "Adobe Garamond Pro", Georgia, serif; }
 strong, b { font-weight: 600; }
@@ -617,3 +617,24 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .button:focus-visi
 .social-icons a { display: inline-flex; align-items: center; gap: 0.3rem; }
 .social-icons svg { width: 1.25em; height: 1.25em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .social-icons svg .dot { fill: currentColor; stroke: none; }
+
+/* Keeps a hyphenated word on one line without a special hyphen */
+.nowrap { white-space: nowrap; }
+
+/* Home page sections that used to be their own pages (2026-11-21): Services & Pricing (#services)
+   and the FAQ (#faq, which now holds the high-risk answer, #high-risk). The two package group titles sit one step under
+   the "Services & Pricing" heading. */
+.package-group .photo .group-title { font-size: 1.75rem; line-height: 1.15; }
+#services > .wrap > .lead { margin-bottom: 1.75rem; }
+
+/* Phones and narrow windows: the menu is pinned too, but slides out of the way while you
+   scroll down and comes back as soon as you scroll up (js/site.js adds .nav-hidden).
+   Jump links stop just below the top of the screen, since the menu is hidden after a jump. */
+@media (max-width: 52rem) {
+  .site-header { position: sticky; top: 0; transition: transform 0.25s ease; }
+  .site-header.nav-hidden { transform: translateY(-100%); }
+  html { scroll-padding-top: 1rem; }
+}
+@media (max-width: 52rem) and (prefers-reduced-motion: reduce) {
+  .site-header { transition: none; }
+}

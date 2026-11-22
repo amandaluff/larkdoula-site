@@ -63,7 +63,7 @@
       subject.value = name ? baseSubject + ': ' + name : baseSubject;
 
       button.disabled = true;
-      button.textContent = 'Sending…';
+      button.textContent = 'Sending...';
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (response) {
           if (!response.ok) throw new Error('Form service returned ' + response.status);
@@ -106,4 +106,66 @@
     }
   });
   if (location.hash) openTarget(location.hash);
+})();
+
+/* Phones and narrow windows (52rem and under): the pinned menu hides while you scroll down
+   and comes back when you scroll up. After a jump link (like Services), it stays hidden so it
+   doesn't cover the heading you jumped to. */
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header || !window.matchMedia) return;
+  var narrow = window.matchMedia('(max-width: 52rem)');
+  var lastY = window.scrollY;
+  var holdUntil = 0;
+
+  function hide() { header.classList.add('nav-hidden'); }
+  function show() { header.classList.remove('nav-hidden'); }
+
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    if (!narrow.matches || y <= header.offsetHeight) { show(); lastY = y; return; }
+    if (Date.now() < holdUntil) { lastY = y; return; }
+    if (y > lastY + 4) hide();
+    else if (y < lastY - 4) show();
+    lastY = y;
+  }, { passive: true });
+
+  // Jump links on the same page, and opening the page at a section (from another page)
+  function afterJump() { if (narrow.matches) { hide(); holdUntil = Date.now() + 1200; } }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="#"]');
+    if (!a || a.pathname !== location.pathname) return;
+    if (a.hash && a.hash.length > 1) afterJump();
+  });
+  if (location.hash.length > 1) afterJump();
+  narrow.addEventListener && narrow.addEventListener('change', function () { if (!narrow.matches) show(); });
+})();
+
+/* Home page: the menu underlines the section you're reading (Meet Amanda, or Services for
+   the packages, high-risk, and FAQ sections), and Home when you're above them. */
+(function () {
+  var home = document.querySelector('.nav-bar nav a[href="./"]');
+  var links = document.querySelectorAll('.nav-bar nav a[href^="#"]');
+  if (!home || !links.length) return;
+  var sections = { about: 'about', services: 'services', 'nicu-support': 'services', faq: 'services' };
+  var linkFor = {};
+  links.forEach(function (a) { linkFor[a.getAttribute('href').slice(1)] = a; });
+  var ids = Object.keys(sections).filter(function (id) { return document.getElementById(id) && linkFor[sections[id]]; });
+  if (!ids.length) return;
+  var all = [home].concat(Array.prototype.slice.call(links));
+
+  function mark() {
+    var line = window.innerHeight * 0.4, current = home;
+    ids.forEach(function (id) {
+      var r = document.getElementById(id).getBoundingClientRect();
+      if (r.top <= line) current = linkFor[sections[id]];
+    });
+    all.forEach(function (a) {
+      if (a === current) a.setAttribute('aria-current', a === home ? 'page' : 'location');
+      else a.removeAttribute('aria-current');
+    });
+  }
+  window.addEventListener('scroll', mark, { passive: true });
+  window.addEventListener('resize', mark);
+  mark();
 })();
