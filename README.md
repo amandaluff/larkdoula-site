@@ -18,6 +18,7 @@ Plain HTML site for Lark Doula, hosted on GitHub Pages. No build step: what is i
 | `css/style.css` | All colors, fonts and layout. The palette is the list of variables at the top. |
 | `images/` | Photos and logo (see `images/README.md`) |
 | `home.html` | Sends the old Google Sites address `/home` to the home page |
+| `nextsteps.html` | Sends the old Google Sites address `/nextsteps` (a walking club page) to the home page |
 | `about.html` | Sends the old address `/about` to the Meet Amanda section of the home page |
 | `services.html` | Sends the old address `/services` to the Services & Pricing section of the home page (moved there 2026-11-21) |
 | `high-risk-pregnancy-doula.html` | Sends the old address `/high-risk-pregnancy-doula` to the high-risk answer in the home page FAQ (moved there 2026-11-21) |
