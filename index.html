@@ -25,7 +25,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"></noscript>
   <!-- The ?v= number makes browsers fetch the newest stylesheet. Raise it whenever css/style.css changes. -->
-  <link rel="stylesheet" href="css/style.css?v=45">
+  <link rel="stylesheet" href="css/style.css?v=47">
 
   <!-- Structured data: tells search engines what this page is about -->
   <script type="application/ld+json">
@@ -140,6 +140,117 @@
 }
   </script>
 
+  <!-- Structured data for the Services & Pricing section: packages and prices (change these with the prices in the page) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Doula services",
+  "provider": {
+    "@id": "https://www.larkdoula.com/#business"
+  },
+  "areaServed": "Milwaukee County, Wisconsin",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Doula packages",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Comprehensive Birth Doula Package",
+        "price": "2000",
+        "priceCurrency": "USD",
+        "description": "Continuous in-person support during birth; Four prenatal visits; Two postpartum visits; On call from 37 weeks; Unlimited text and phone support. Great for first-time parents, high-risk pregnancies, and anyone who wants more time to get to know each other."
+      },
+      {
+        "@type": "Offer",
+        "name": "Essential Birth Doula Package",
+        "price": "1600",
+        "priceCurrency": "USD",
+        "description": "Continuous in-person support during birth; Two prenatal visits; One postpartum visit; On call from 37 weeks; Unlimited text and phone support. My core birth doula package, great for every kind of birth."
+      },
+      {
+        "@type": "Offer",
+        "name": "Prenatal & Postpartum Package",
+        "price": "850",
+        "priceCurrency": "USD",
+        "description": "Three prenatal visits, including birth preferences planning; Two postpartum visits; Unlimited text and phone support. Great for people who want individualized education and support before and after birth, but who do not want in-person support at their birth."
+      }
+    ]
+  }
+}
+  </script>
+  <!-- Structured data for the FAQ section (keep it the same as the answers in the page) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a doula do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A doula is a trained support person for you and your family through pregnancy, birth, and the early weeks of parenthood. I bring knowledge of what to expect, support you in advocating for yourself and your family, and help you feel confident and comforted. I do not provide medical care, give medical advice, or make decisions for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does support look like before, during, and after the birth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prenatal Visits: Before our first visit, you fill out a short worksheet about what matters most to you. I use your answers to plan our visits, so our time goes to your priorities. Prenatal visits are usually about 90 minutes. Core topics I cover include comfort and pain relief during labor; making decisions about common interventions; feeding your baby; newborn care; and navigating a high-risk pregnancy. Labor and Birth: When your package includes birth support, I'm on call from 37 weeks. When labor starts, or your induction begins, we stay in touch by phone and decide together when I should join you. Many people want me there once labor is active, but you can ask me to come sooner. For a planned cesarean, I join you before the surgery, and in the operating room when the hospital allows. Once I'm with you, I stay through the birth. During the birth, I help you stay comfortable and support you and your support person as you make decisions. I stay for 1 to 2 hours after the birth to help you settle in and get started with feeding. If I can't be there, a backup doula will support you. Postpartum Visits: Postpartum visits can be at home, in the hospital, or virtual, and last up to 2 hours. Depending on what you need, we can talk through your birth and how you are feeling, troubleshoot feeding (breast, pump, or bottle), or go over questions about caring for your baby. I can also help in practical ways, like watching your baby so you can rest or shower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a doula still helpful if I'm having an induction, an epidural, or a planned cesarean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Support matters just as much when your birth includes an induction, an epidural, or a cesarean. With an induction, support often starts before labor, with talking through what the process might look like (inductions can take a long time) and staying in touch by phone until you want me there in person. With an epidural, the focus is on comfort and understanding what's happening. For a planned cesarean, support can include writing your preferences for the birth (like skin-to-skin and feeding) and being with you in the operating room when the hospital allows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you support high-risk or complicated pregnancies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A high-risk pregnancy often comes with more appointments, more tests, and more decisions. We'll start with what you already know about your diagnosis and the questions you have. Support can include: Learning how your diagnosis affects your body; Talking through your care team's plan and how you feel about it; Finding answers to your questions; Virtual or in-person support for additional tests and procedures; Using informed decision-making steps to work through your choices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer payment plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A 50% deposit is due when you sign your agreement. For birth packages, the balance is due by 37 weeks. You can also pay through Afterpay, which splits the cost into smaller payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do you provide services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Visits can be in your home, at your hospital, or in a public place, and all prenatal and postpartum visits can also be virtual. I am based in Bay View and serve families across Milwaukee County, including Wauwatosa, Whitefish Bay, Glendale, Greenfield, West Allis, Franklin, Oak Creek, South Milwaukee, and Cudahy. I can attend births at any local hospital or birth center, including Aurora Sinai Medical Center, Aurora West Allis Medical Center, Ascension Columbia St. Mary's Hospital Milwaukee, Ascension St. Joseph, and the Froedtert Hospital Birth Center."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- Structured data for the high-risk pregnancy section -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "High-Risk Pregnancy Doula Support",
+  "serviceType": "High-risk pregnancy doula",
+  "provider": {
+    "@id": "https://www.larkdoula.com/#business"
+  },
+  "areaServed": "Milwaukee County, Wisconsin",
+  "url": "https://www.larkdoula.com/#high-risk"
+}
+  </script>
+
   <!-- Google Analytics (the same tag is in every page). The gtag script itself loads once the page has appeared (see the loader below); anything recorded before then waits in dataLayer. -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -148,7 +259,7 @@
     gtag('config', 'G-CBC3Q89SKQ');
   </script>
   <!-- Records taps on the phone number, email address and call buttons (see js/site.js) -->
-  <script defer src="js/site.js?v=43"></script>
+  <script defer src="js/site.js?v=45"></script>
   <!-- Loads Google Analytics and the Meta Pixel (PageView only) after the page has appeared, so on slow phones the photo and text don't wait on them. The same code is in every page. -->
   <script>
     window.addEventListener('load', function () {
@@ -173,7 +284,7 @@
         <ul>
           <li><a href="./" aria-current="page">Home</a></li>
           <li><a href="#about">Meet Amanda</a></li>
-          <li><a href="services">Services</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="nicu-doula">NICU Support</a></li>
           <li><a href="resources">Resources</a></li>
           <!-- To add the research library to the menu, uncomment the next line (in every page): -->
@@ -188,7 +299,7 @@
       <div class="wrap hero-grid">
         <div>
           <!-- This small line is the page's main heading for search engines -->
-          <h1 class="kicker">Milwaukee doula for birth, high&#8209;risk pregnancy &amp; NICU families</h1>
+          <h1 class="kicker">Milwaukee doula for birth, <span class="nowrap">high-risk</span> pregnancy &amp; NICU families</h1>
           <p class="display">I'm Amanda, and I'm glad you're here!</p>
           <p class="lead">I'm a certified doula with a doctorate in public health and over a decade of experience in maternal and child health. I believe birth looks different for everyone, and there's no single "right" way to do it. Birth stays with us for the rest of our lives, and I want yours to be a positive start for you and your baby.</p>
           <p>I want you to know that I can support you no matter what your pregnancy looks like, whether you're hoping for an unmedicated birth, planning an epidural, or preparing for an induction or a scheduled cesarean (or aren't sure yet what you want). I have particular expertise in supporting families through high-risk pregnancies and NICU admissions.</p>
@@ -196,7 +307,7 @@
             <a class="button" href="contact#book">Book a Free Call</a>
           </p>
           <p>We'll start with a free, no-commitment conversation to get to know each other.</p>
-          <p><a href="#about">More about me</a> &nbsp;&middot;&nbsp; <a href="services">Services &amp; pricing</a></p>
+          <p><a href="#about">More about me</a> | <a href="#services">Services &amp; pricing</a></p>
         </div>
         <figure class="hero-photo">
           <picture>
@@ -214,23 +325,22 @@
         <div class="cards">
           <div class="card accent">
             <h3>Birth &amp; Pregnancy Support</h3>
-            <p>I provide evidence-based support through pregnancy, birth, and the weeks after, for every kind of birth. We'll prepare together so you and your support person feel confident and comforted.</p>
+            <p>I provide evidence-based support through pregnancy, birth, and postpartum, for every kind of birth.</p>
             <!-- Source: Viswanathan et al., Obstet Gynecol 2026;148(4):e237-e256. Improved birth experiences: "likely" (moderate certainty). Parenting confidence is low certainty, so it is left out here. -->
             <p><a href="research/doula-evidence">Doula support is linked to better birth experiences.</a></p>
-            <a class="arrow-link" href="services#packages">See packages</a>
+            <a class="arrow-link" href="#packages">See packages</a>
           </div>
           <div class="card accent">
             <h3>High-Risk &amp; Complicated Pregnancy</h3>
-            <p>I support families with high-risk and complicated pregnancies, including preeclampsia, gestational diabetes, twins, concerns about preterm birth, or a diagnosis for your baby. You don't need a "typical" pregnancy to work with me, and we'll prepare together for your appointments and your birth.</p>
-            <a class="arrow-link" href="high-risk-pregnancy-doula">How I support high-risk pregnancies</a>
+            <p>I support families with high-risk and complicated pregnancies, including preeclampsia, gestational diabetes, twins, concerns about preterm birth, or a diagnosis for your baby.</p>
+            <a class="arrow-link" href="#high-risk">How I support high-risk pregnancies</a>
           </div>
           <div class="card accent">
             <h3>NICU Support</h3>
-            <p>I support NICU families before birth, during their baby's admission, and through the transition home. We'll build a plan together around what your family needs, like bonding with your baby or pumping.</p>
+            <p>I support NICU families before birth, during their baby's admission, and through the transition home.</p>
             <a class="arrow-link" href="nicu-doula">About NICU support</a>
           </div>
         </div>
-        <p class="fee-note">I offer reduced fees and flexible payment plans for families with financial need. I also offer reduced fees to Black, Indigenous, and LGBTQ+ families, because they face more barriers to respectful, safe birth care. <a href="contact">Reach out and we'll find a plan that works for you</a>.</p>
       </div>
     </section>
 
@@ -271,6 +381,142 @@
       </div>
     </section>
 
+    <section class="sand" id="services">
+      <div class="wrap">
+        <h2>Services &amp; Pricing</h2>
+        <p class="lead">I offer in-person visits throughout Milwaukee County, and everything except birth support can also be virtual.</p>
+        <div id="packages">
+          <div class="package-group">
+            <figure class="photo">
+              <img src="images/flower-buds.jpg" alt="Pink flower buds on a branch" loading="lazy">
+              <h3 class="group-title">Birth Doula &amp; Pregnancy Packages</h3>
+              <p style="margin-top: 0.5rem"><a class="arrow-link" href="#high-risk">Support for high-risk pregnancies</a></p>
+              <p class="package-note"><strong>None of these fit?</strong>I can create a custom package with more or less support.</p>
+            </figure>
+            <div class="package-list">
+              <!-- To change a price or what's included, edit the text below -->
+              <div class="card package">
+                <h3>Comprehensive Birth Doula Package <span class="price">$2,000</span></h3>
+                <p>Great for first-time parents, high-risk pregnancies, and anyone who wants more time to get to know each other.</p>
+                <ul>
+                  <li>Continuous in-person support during birth</li>
+                  <li>Four <a href="#prenatal-visits" class="faq-jump">prenatal visits</a></li>
+                  <li>Two <a href="#postpartum-visits" class="faq-jump">postpartum visits</a></li>
+                  <li>On call from 37 weeks</li>
+                  <li>Unlimited text and phone support</li>
+                </ul>
+              </div>
+              <!-- To change a price or what's included, edit the text below -->
+              <div class="card package">
+                <h3>Essential Birth Doula Package <span class="price">$1,600</span></h3>
+                <p>My core birth doula package, great for every kind of birth.</p>
+                <ul>
+                  <li>Continuous in-person support during birth</li>
+                  <li>Two <a href="#prenatal-visits" class="faq-jump">prenatal visits</a></li>
+                  <li>One <a href="#postpartum-visits" class="faq-jump">postpartum visit</a></li>
+                  <li>On call from 37 weeks</li>
+                  <li>Unlimited text and phone support</li>
+                </ul>
+              </div>
+              <!-- To change a price or what's included, edit the text below -->
+              <div class="card package">
+                <h3>Prenatal &amp; Postpartum Package <span class="price">$850</span></h3>
+                <p>Great for people who want individualized education and support before and after birth, but who do not want in-person support at their birth.</p>
+                <ul>
+                  <li>Three <a href="#prenatal-visits" class="faq-jump">prenatal visits</a>, including birth preferences planning</li>
+                  <li>Two <a href="#postpartum-visits" class="faq-jump">postpartum visits</a></li>
+                  <li>Unlimited text and phone support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NICU support is part of Services & Pricing, on a white background so the long section is broken up -->
+    <section id="nicu-support">
+      <div class="wrap">
+        <div>
+          <div class="package-group" id="nicu">
+            <figure class="photo">
+              <img src="images/lake-sunrise.jpg" alt="Sunrise over Lake Michigan" loading="lazy">
+              <h3 class="group-title">NICU Doula Support</h3>
+              <p style="margin-top: 0.5rem"><a class="arrow-link" href="nicu-doula">About NICU doula support</a></p>
+            </figure>
+            <div class="package-list">
+              <!-- NICU support: $150/month retainer plus $60/hour, 2-hour monthly minimum ($270). Details are in the agreement, not on the card. The full list of what it can include is on nicu-doula.html. -->
+              <div class="card package">
+                <h3>NICU Support Plan <span class="price">From $270</span></h3>
+                <p>Every NICU admission is different, so each support plan is built around your family's needs. The base package includes 2 hours of in-person or virtual support, as well as text and phone support. Additional hours are available at $60/hour. Support can include:</p>
+                <ul>
+                  <li>Preparing for a possible NICU admission</li>
+                  <li>Support during your baby's admission</li>
+                  <li>Lactation and feeding support, including pumping</li>
+                  <li>The transition home</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <p class="fee-note">I offer reduced fees and flexible payment plans for families with financial need. I also offer reduced fees to Black, Indigenous, and LGBTQ+ families, because they face more barriers to respectful, safe birth care. <a href="contact">Reach out and we'll find a plan that works for you</a>.</p>
+        <p style="margin-top: 1.25rem"><a class="arrow-link" href="pregnancy-loss-and-abortion-support">Pregnancy loss and abortion support at no cost</a></p>
+      </div>
+    </section>
+
+    <section class="faq sand" id="faq">
+      <div class="wrap two-col">
+        <h2>Frequently Asked Questions</h2>
+        <div>
+        <details>
+          <summary>What does a doula do?</summary>
+          <p>A doula is a trained support person for you and your family through pregnancy, birth, and the early weeks of parenthood. I bring knowledge of what to expect, support you in advocating for yourself and your family, and help you feel confident and comforted. I do not provide medical care, give medical advice, or make decisions for you.</p>
+        </details>
+        <details>
+          <summary>What does support look like before, during, and after the birth?</summary>
+          <p class="faq-label" id="prenatal-visits">Prenatal Visits</p>
+          <p>Before our first visit, you fill out a short worksheet about what matters most to you. I use your answers to plan our visits, so our time goes to your priorities. Prenatal visits are usually about 90 minutes. Core topics I cover include:</p>
+          <ul>
+            <li>Comfort and pain relief during labor</li>
+            <li>Making decisions about common interventions</li>
+            <li>Feeding your baby</li>
+            <li>Newborn care</li>
+            <li>Navigating a high-risk pregnancy</li>
+          </ul>
+          <p class="faq-label">Labor and Birth</p>
+          <p>When your package includes birth support, I'm on call from 37 weeks. When labor starts, or your induction begins, we stay in touch by phone and decide together when I should join you. Many people want me there once labor is active, but you can ask me to come sooner. For a planned cesarean, I join you before the surgery, and in the operating room when the hospital allows. Once I'm with you, I stay through the birth. During the birth, I help you stay comfortable and support you and your support person as you make decisions. I stay for 1 to 2 hours after the birth to help you settle in and get started with feeding. If I can't be there, a backup doula will support you.</p>
+          <p class="faq-label" id="postpartum-visits">Postpartum Visits</p>
+          <p>Postpartum visits can be at home, in the hospital, or virtual, and last up to 2 hours. Depending on what you need, we can talk through your birth and how you are feeling, troubleshoot feeding (breast, pump, or bottle), or go over questions about caring for your baby. I can also help in practical ways, like watching your baby so you can rest or shower.</p>
+        </details>
+        <details>
+          <summary>Is a doula still helpful if I'm having an induction, an epidural, or a planned cesarean?</summary>
+          <p>Yes! Support matters just as much when your birth includes an induction, an epidural, or a cesarean.</p>
+          <p>With an induction, support often starts before labor, with talking through what the process might look like (inductions can take a long time) and staying in touch by phone until you want me there in person. With an epidural, the focus is on comfort and understanding what's happening. For a planned cesarean, support can include writing your preferences for the birth (like skin-to-skin and feeding) and being with you in the operating room when the hospital allows.</p>
+        </details>
+        <details id="high-risk">
+          <summary>How do you support high-risk or complicated pregnancies?</summary>
+          <p>A high-risk pregnancy often comes with more appointments, more tests, and more decisions. We'll start with what you already know about your diagnosis and the questions you have. Support can include:</p>
+          <ul>
+            <li>Learning how your diagnosis affects your body</li>
+            <li>Talking through your care team's plan and how you feel about it</li>
+            <li>Finding answers to your questions</li>
+            <li>Virtual or in-person support for additional tests and procedures</li>
+            <li>Using informed decision-making steps to work through your choices</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Do you offer payment plans?</summary>
+          <p>Yes. A 50% deposit is due when you sign your agreement. For birth packages, the balance is due by 37 weeks. You can also pay through Afterpay, which splits the cost into smaller payments.</p>
+        </details>
+        <details>
+          <summary>Where do you provide services?</summary>
+          <p>Visits can be in your home, at your hospital, or in a public place, and all prenatal and postpartum visits can also be virtual. I am based in Bay View and serve families across Milwaukee County, including Wauwatosa, Whitefish Bay, Glendale, Greenfield, West Allis, Franklin, Oak Creek, South Milwaukee, and Cudahy. I can attend births at any local hospital or birth center, including Aurora Sinai Medical Center, Aurora West Allis Medical Center, Ascension Columbia St. Mary's Hospital Milwaukee, Ascension St. Joseph, and the Froedtert Hospital Birth Center.</p>
+        </details>
+        </div>
+      </div>
+    </section>
+
     <section class="band">
       <div class="wrap two-col wide-left">
         <div>
@@ -303,7 +549,7 @@
           <ul>
           <li><a href="./">Home</a></li>
           <li><a href="#about">Meet Amanda</a></li>
-          <li><a href="services">Services</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="nicu-doula">NICU Support</a></li>
           <li><a href="resources">Resources</a></li>
           <li><a href="pregnancy-loss-and-abortion-support">Loss and Abortion Support</a></li>
@@ -312,7 +558,7 @@
           </ul>
         </nav>
       </div>
-      <p class="copyright">&copy; 2026 Lark Services LLC &middot; <a href="privacy">Privacy notice</a></p>
+      <p class="copyright">&copy; 2026 Lark Services LLC | <a href="privacy">Privacy notice</a></p>
     </div>
   </footer>
 </body>
